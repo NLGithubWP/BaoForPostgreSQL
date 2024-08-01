@@ -102,7 +102,7 @@ void _PG_init(void) {
     "bao_host",
     "Bao server host", NULL,
     &bao_host,
-    "localhost",
+    "172.17.0.1",
     PGC_USERSET,
     0,
     NULL, NULL, NULL);
