@@ -76,6 +76,8 @@ def main():
 
     print("bao_chunks", bao_chunks)
 
+    print("---begin online learning---")
+
     for c_idx, chunk in enumerate(bao_chunks):
         if USE_BAO:
             os.system("cd bao_server && python3 baoctl.py --retrain")
