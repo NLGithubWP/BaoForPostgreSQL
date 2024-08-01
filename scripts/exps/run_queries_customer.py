@@ -6,7 +6,7 @@ from time import time, sleep
 from pprint import pprint
 
 USE_BAO = True
-PG_CONNECTION_STR = "dbname=imdb user=postgres password=123 host=localhost"
+PG_CONNECTION_STR = "dbname=stats_test user=postgres password=123 host=localhost"
 
 
 # Function to read queries from files
