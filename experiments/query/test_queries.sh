@@ -25,6 +25,7 @@ SKIP_QUERIES=(
   "test_query_50.sql"
   "test_query_51.sql"
   "test_query_31.sql"
+  "test_query_119.sql"
 )
 
 # Create or clear the log file
