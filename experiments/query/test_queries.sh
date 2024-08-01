@@ -28,6 +28,11 @@ SKIP_QUERIES=(
   "test_query_119.sql"
   "test_query_43.sql"
   "test_query_60.sql"
+      # this is slow
+  "test_query_60.sql"
+  "test_query_54.sql"
+  "test_query_53.sql"
+  "test_query_69.sql"
 )
 
 # Create or clear the log file

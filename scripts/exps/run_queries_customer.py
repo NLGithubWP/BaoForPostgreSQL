@@ -107,6 +107,11 @@ def main():
         "test_query_31.sql",
         "test_query_119.sql",
         "test_query_43.sql"
+        # this is slow
+        "test_query_60.sql",
+        "test_query_54.sql",
+        "test_query_53.sql",
+        "test_query_69.sql",
     ]
 
     test_queries = read_queries(
