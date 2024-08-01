@@ -25,28 +25,22 @@ def read_queries(query_paths):
 
 
 def run_query(fq, sql, conn_str, bao_select=False, bao_reward=False):
-    print(f"[debug] run_query for file: {fq}")
     start = time()
     while True:
         try:
-            print(f"[debug] Connectting for file: {fq}")
             conn = psycopg2.connect(conn_str)
             cur = conn.cursor()
-            print(f"[debug] Connected, Executing query file: {fq}")
             cur.execute(f"SET enable_bao TO {bao_select or bao_reward}")
             cur.execute(f"SET enable_bao_selection TO {bao_select}")
             cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
             cur.execute("SET bao_num_arms TO 5")
             cur.execute("SET statement_timeout TO 500000")
             cur.execute(sql)
-            print(f"[debug] Done with exeuction query file: {fq}")
             cur.fetchall()
             conn.close()
-            print(f"[debug] Discinnected")
             break
         except Exception as e:
             print(f"Error executing query: {e}")
-            print(f"[debug] errored {e}")
             sleep(0.1)
             continue
     stop = time()
@@ -124,9 +118,9 @@ def main():
         [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if
          f.startswith("test_") and f not in SKIP_QUERIES])
 
-    print("Read", len(train_queries), "training queries.")
-    print("Read", len(test_queries), "testing queries.")
-    print("Using Bao:", USE_BAO)
+    print("Read", len(train_queries), "training queries.", flush=True)
+    print("Read", len(test_queries), "testing queries.", flush=True)
+    print("Using Bao:", USE_BAO, flush=True)
 
     # Pre-train with training queries
     print("---- Executing training queries for initial training ---- ")
@@ -134,20 +128,20 @@ def main():
         print(f"[debug] just begin one")
         pg_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=True)
         print("x", "x", time(), fp, pg_time, "PG", flush=True)
-        print(f"[debug] just end one")
+        print(f"[debug] just end one", flush=True)
 
     # Determine chunk size for testing queries
     chunk_size = 25 if len(test_queries) >= 25 else len(test_queries)
     bao_chunks = list(chunks(test_queries, chunk_size))
 
-    print("bao_chunks", bao_chunks)
-
-    print("---begin online learning---")
+    print(f"---begin online learning with {len(bao_chunks)} and each with {len(bao_chunks[0])}---")
 
     for c_idx, chunk in enumerate(bao_chunks):
         if USE_BAO:
+            print("---- start retraining ---- ")
             os.system("cd bao_server && CUDA_VISIBLE_DEVICES=1 python3 baoctl.py --retrain")
             os.system("sync")
+        print("---- start online evaluating ---- ")
         for q_idx, (fp, q) in enumerate(chunk):
             q_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=USE_BAO, bao_select=USE_BAO)
             print(c_idx, q_idx, time(), fp, q_time, flush=True)
