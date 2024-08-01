@@ -30,7 +30,7 @@ def run_query(fq, sql, conn_str, bao_select=False, bao_reward=False):
         try:
             conn = psycopg2.connect(conn_str)
             cur = conn.cursor()
-            print(f"Executing query from file: {fq}")
+            print(f"Connected, Executing query from file: {fq}")
             cur.execute(f"SET enable_bao TO {bao_select or bao_reward}")
             cur.execute(f"SET enable_bao_selection TO {bao_select}")
             cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
