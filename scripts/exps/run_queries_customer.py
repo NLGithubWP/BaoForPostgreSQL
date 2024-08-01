@@ -46,7 +46,8 @@ def run_query(fq, sql, conn_str, bao_select=False, bao_reward=False):
             break
         except Exception as e:
             print(f"Error executing query: {e}")
-            sleep(1)
+            print(f"[debug] errored {e}")
+            sleep(0.1)
             continue
     stop = time()
     return stop - start
@@ -128,10 +129,12 @@ def main():
     print("Using Bao:", USE_BAO)
 
     # Pre-train with training queries
-    print("Executing training queries for initial training")
+    print("---- Executing training queries for initial training ---- ")
     for fp, q in train_queries[:25]:
+        print(f"[debug] just begin one")
         pg_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=True)
         print("x", "x", time(), fp, pg_time, "PG", flush=True)
+        print(f"[debug] just end one")
 
     # Determine chunk size for testing queries
     chunk_size = 25 if len(test_queries) >= 25 else len(test_queries)
