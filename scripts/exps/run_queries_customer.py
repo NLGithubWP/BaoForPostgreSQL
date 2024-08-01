@@ -4,12 +4,17 @@ import sys
 import random
 from time import time, sleep
 from pprint import pprint
-
-USE_BAO = True
-PG_CONNECTION_STR = "dbname=stats_test user=postgres password=123 host=localhost"
+import argparse
 
 
-# Function to read queries from files
+def parse_args():
+    parser = argparse.ArgumentParser(description="Run queries with optional Bao optimization.")
+    parser.add_argument('query_folder', type=str, help='Path to the folder containing query files.')
+    parser.add_argument('--dbname', type=str, default='stats_test', help='Database name to connect to.')
+    parser.add_argument('--use_bao', action='store_true', help='Enable Bao optimization.')
+    return parser.parse_args()
+
+
 def read_queries(query_paths):
     queries = []
     for fp in query_paths:
@@ -19,12 +24,11 @@ def read_queries(query_paths):
     return queries
 
 
-# Function to execute a query
-def run_query(sql, bao_select=False, bao_reward=False):
+def run_query(sql, conn_str, bao_select=False, bao_reward=False):
     start = time()
     while True:
         try:
-            conn = psycopg2.connect(PG_CONNECTION_STR)
+            conn = psycopg2.connect(conn_str)
             cur = conn.cursor()
             cur.execute(f"SET enable_bao TO {bao_select or bao_reward}")
             cur.execute(f"SET enable_bao_selection TO {bao_select}")
@@ -43,7 +47,6 @@ def run_query(sql, bao_select=False, bao_reward=False):
     return stop - start
 
 
-# Function to chunk the queries
 def chunks(lst, n):
     """Yield successive n-sized chunks from lst."""
     for i in range(0, len(lst), n):
@@ -51,14 +54,16 @@ def chunks(lst, n):
 
 
 def main():
-    # Assuming the script is called with paths to the query folders
-    query_folder = sys.argv[1]
+    args = parse_args()
+
+    PG_CONNECTION_STR = f"dbname={args.dbname} user=postgres password=123 host=localhost"
+    USE_BAO = args.use_bao
 
     # Read all queries
     train_queries = read_queries(
-        [os.path.join(query_folder, f) for f in os.listdir(query_folder) if f.startswith("train_")])
+        [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if f.startswith("train_")])
     test_queries = read_queries(
-        [os.path.join(query_folder, f) for f in os.listdir(query_folder) if f.startswith("test_")])
+        [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if f.startswith("test_")])
 
     print("Read", len(train_queries), "training queries.")
     print("Read", len(test_queries), "testing queries.")
@@ -67,7 +72,7 @@ def main():
     # Pre-train with training queries
     print("Executing training queries for initial training")
     for fp, q in train_queries:
-        pg_time = run_query(q, bao_reward=True)
+        pg_time = run_query(q, PG_CONNECTION_STR, bao_reward=True)
         print("x", "x", time(), fp, pg_time, "PG", flush=True)
 
     # Determine chunk size for testing queries
@@ -83,7 +88,7 @@ def main():
             os.system("cd bao_server && CUDA_VISIBLE_DEVICES=1 python3 baoctl.py --retrain")
             os.system("sync")
         for q_idx, (fp, q) in enumerate(chunk):
-            q_time = run_query(q, bao_reward=USE_BAO, bao_select=USE_BAO)
+            q_time = run_query(q, PG_CONNECTION_STR, bao_reward=USE_BAO, bao_select=USE_BAO)
             print(c_idx, q_idx, time(), fp, q_time, flush=True)
 
 
@@ -92,6 +97,10 @@ if __name__ == "__main__":
 
 
 """
-python scripts/exps/run_queries_customer.py ./experiments/query/sample_query_stats_STATS_origin | tee ./experiments/result/logs/bao_run_origin_test.txt
-"""
+python scripts/exps/run_queries_customer.py ./experiments/query/sample_query_stats_STATS_origin --dbname=stats_test --use_bao | tee ./experiments/result/logs/bao_run_origin_test.txt
 
+python scripts/exps/run_queries_customer.py ./experiments/query/sample_query_stats_STATS_origin --dbname=stats --use_bao | tee ./experiments/result/logs/bao_run_origin.txt
+python scripts/exps/run_queries_customer.py ./experiments/query/sample_query_stats_severe_drift --dbname=stats_severe --use_bao | tee ./experiments/result/logs/bao_run_severe.txt
+python scripts/exps/run_queries_customer.py ./experiments/query/sample_query_stats_mild_drift --dbname=stats_mid --use_bao | tee ./experiments/result/logs/bao_run_mild.txt
+
+"""
