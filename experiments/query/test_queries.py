@@ -37,18 +37,14 @@ SKIP_QUERIES = [
     "test_query_69.sql",
 ]
 
-# Create or clear the log file
-with open(LOG_FILE, 'w') as log_file:
-    pass
-
 
 def execute_sql_file(sql_file):
     global MAX_TIME
     start_time = time.time()
 
     print(f"Executing query from file: {sql_file}")
-    with open(LOG_FILE, 'a') as log_file:
-        print(f"Executing query from file: {sql_file}\n")
+
+    print(f"Executing query from file: {sql_file}\n")
 
     try:
         conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, host=DB_HOST)
@@ -61,15 +57,11 @@ def execute_sql_file(sql_file):
         conn.close()
     except Exception as e:
         print(f"Error executing query from file {sql_file}: {e}")
-        with open(LOG_FILE, 'a') as log_file:
-            print(f"Error executing query from file {sql_file}: {e}\n")
 
     end_time = time.time()
     execution_time = end_time - start_time
 
     print(f"Execution time for {sql_file}: {execution_time:.2f} seconds")
-    with open(LOG_FILE, 'a') as log_file:
-        print(f"Execution time for {sql_file}: {execution_time:.2f} seconds\n")
 
     if execution_time > MAX_TIME:
         MAX_TIME = execution_time
@@ -81,12 +73,9 @@ for sql_file in glob.glob(os.path.join(QUERY_FOLDER, '*.sql')):
 
     if base_name.startswith('train_') or base_name in SKIP_QUERIES:
         print(f"Skipping {base_name}")
-        with open(LOG_FILE, 'a') as log_file:
-            print(f"Skipping {base_name}\n")
+
         continue
 
     execute_sql_file(sql_file)
 
 print(f"Maximum execution time: {MAX_TIME:.2f} seconds")
-with open(LOG_FILE, 'a') as log_file:
-    print(f"Maximum execution time: {MAX_TIME:.2f} seconds\n")
