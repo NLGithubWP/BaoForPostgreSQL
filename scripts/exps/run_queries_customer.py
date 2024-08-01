@@ -137,7 +137,7 @@ def main():
     for c_idx, chunk in enumerate(bao_chunks):
         if USE_BAO:
             print("---- start retraining ---- ", flush=True)
-            os.system("cd bao_server && CUDA_VISIBLE_DEVICES=1 python3 baoctl.py --retrain")
+            os.system("cd bao_server && CUDA_VISIBLE_DEVICES='' python3 baoctl.py --retrain")
             os.system("sync")
         print("---- start online evaluating ---- ", flush=True)
         for q_idx, (fp, q) in enumerate(chunk):
