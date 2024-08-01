@@ -6,7 +6,7 @@ from time import time, sleep
 from pprint import pprint
 
 USE_BAO = True
-PG_CONNECTION_STR = "dbname=stats_test user=postgres host=localhost"
+PG_CONNECTION_STR = "dbname=imdb user=postgres password=123 host=localhost"
 
 
 # Function to read queries from files
@@ -92,7 +92,6 @@ if __name__ == "__main__":
 
 
 """
-python run_queries.py /code/AI4QueryOptimizer/baseline/BaoForPostgreSQL/experiments/query/sample_query_stats_STATS_origin
-
+python scripts/exps/run_queries_customer.py ./experiments/query/sample_query_stats_STATS_origin | tee ./experiments/result/logs/bao_run_origin_test.txt
 """
 
