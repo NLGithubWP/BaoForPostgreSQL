@@ -380,7 +380,7 @@ BaoPlan* plan_query(Query *parse, int cursorOptions, ParamListInfo boundParams) 
   
   conn_fd = connect_to_bao(bao_host, bao_port);
   if (conn_fd == -1) {
-    elog(WARNING, "Unable to connect to Bao server.");
+    elog(WARNING, "Unable to connect to Bao server %s:%d", bao_host, bao_port);
     return NULL;
   }
 
