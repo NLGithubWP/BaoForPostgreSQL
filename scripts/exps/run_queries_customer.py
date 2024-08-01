@@ -177,9 +177,37 @@ def main():
         "test_query_89.sql"
     ]
 
+    Executed_query2 = [
+        "test_query_123.sql",
+        "test_query_43.sql",
+        "test_query_110.sql",
+        "test_query_79.sql",
+        "test_query_87.sql",
+        "test_query_94.sql",
+        "test_query_11.sql",
+        "test_query_129.sql",
+        "test_query_28.sql",
+        "test_query_55.sql",
+        "test_query_61.sql",
+        "test_query_90.sql",
+        "test_query_65.sql",
+        "test_query_25.sql",
+        "test_query_20.sql",
+        "test_query_29.sql",
+        "test_query_32.sql",
+        "test_query_143.sql",
+        "test_query_42.sql",
+        "test_query_96.sql",
+        "test_query_35.sql",
+        "test_query_14.sql",
+        "test_query_26.sql",
+        "test_query_49.sql",
+        "test_query_19.sql"
+    ]
+
     test_queries = read_queries(
         [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if
-         f.startswith("test_") and f not in SKIP_QUERIES and f not in Executed_query])
+         f.startswith("test_") and f not in SKIP_QUERIES and f not in Executed_query and f not in Executed_query2])
 
     print("Read", len(train_queries), "training queries.", flush=True)
     print("Read", len(test_queries), "testing queries.", flush=True)

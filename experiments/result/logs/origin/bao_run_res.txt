@@ -89,3 +89,30 @@ New model had no regressions.
 3 7 1722546671.795793 ./experiments/query/sample_query_stats_STATS_origin/test_query_68.sql 0.7584772109985352
 3 8 1722546672.1103106 ./experiments/query/sample_query_stats_STATS_origin/test_query_145.sql 0.3144819736480713
 3 9 1722546672.8091664 ./experiments/query/sample_query_stats_STATS_origin/test_query_89.sql 0.6988153457641602
+
+
+0 0 1722547311.4789026 ./experiments/query/sample_query_stats_STATS_origin/test_query_123.sql 22.323390007019043
+0 1 1722547312.2575085 ./experiments/query/sample_query_stats_STATS_origin/test_query_43.sql 0.7785341739654541
+0 2 1722547312.7197406 ./experiments/query/sample_query_stats_STATS_origin/test_query_110.sql 0.462186336517334
+0 3 1722547313.1757197 ./experiments/query/sample_query_stats_STATS_origin/test_query_79.sql 0.4559347629547119
+0 4 1722547313.7874067 ./experiments/query/sample_query_stats_STATS_origin/test_query_87.sql 0.6116347312927246
+0 5 1722547321.6791646 ./experiments/query/sample_query_stats_STATS_origin/test_query_94.sql 7.891714572906494
+0 6 1722547368.0523376 ./experiments/query/sample_query_stats_STATS_origin/test_query_11.sql 46.37311601638794
+0 7 1722547368.9830317 ./experiments/query/sample_query_stats_STATS_origin/test_query_129.sql 0.9306173324584961
+0 8 1722547369.9464545 ./experiments/query/sample_query_stats_STATS_origin/test_query_28.sql 0.9633774757385254
+0 9 1722547370.0799336 ./experiments/query/sample_query_stats_STATS_origin/test_query_55.sql 0.1334381103515625
+0 10 1722547370.3908308 ./experiments/query/sample_query_stats_STATS_origin/test_query_61.sql 0.3108539581298828
+0 11 1722547370.680307 ./experiments/query/sample_query_stats_STATS_origin/test_query_90.sql 0.28943490982055664
+0 12 1722547376.5068889 ./experiments/query/sample_query_stats_STATS_origin/test_query_65.sql 5.826540470123291
+0 13 1722547383.9040604 ./experiments/query/sample_query_stats_STATS_origin/test_query_25.sql 7.397080898284912
+0 14 1722547384.343609 ./experiments/query/sample_query_stats_STATS_origin/test_query_20.sql 0.4394958019256592
+0 15 1722547384.6551828 ./experiments/query/sample_query_stats_STATS_origin/test_query_29.sql 0.31153011322021484
+0 16 1722547384.750706 ./experiments/query/sample_query_stats_STATS_origin/test_query_32.sql 0.09547877311706543
+0 17 1722547385.020041 ./experiments/query/sample_query_stats_STATS_origin/test_query_143.sql 0.26929450035095215
+0 18 1722547385.1711423 ./experiments/query/sample_query_stats_STATS_origin/test_query_42.sql 0.15105915069580078
+0 19 1722547385.4539073 ./experiments/query/sample_query_stats_STATS_origin/test_query_96.sql 0.28272461891174316
+0 20 1722547386.0966961 ./experiments/query/sample_query_stats_STATS_origin/test_query_35.sql 0.6427507400512695
+0 21 1722547386.2203524 ./experiments/query/sample_query_stats_STATS_origin/test_query_14.sql 0.12361574172973633
+0 22 1722547398.990856 ./experiments/query/sample_query_stats_STATS_origin/test_query_26.sql 12.770461559295654
+0 23 1722547399.106776 ./experiments/query/sample_query_stats_STATS_origin/test_query_49.sql 0.11588072776794434
+0 24 1722547404.0120559 ./experiments/query/sample_query_stats_STATS_origin/test_query_19.sql 4.905239582061768
