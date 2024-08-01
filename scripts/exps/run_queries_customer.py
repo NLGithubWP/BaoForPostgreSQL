@@ -34,7 +34,7 @@ def run_query(sql, conn_str, bao_select=False, bao_reward=False):
             cur.execute(f"SET enable_bao_selection TO {bao_select}")
             cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
             cur.execute("SET bao_num_arms TO 5")
-            cur.execute("SET statement_timeout TO 300000")
+            cur.execute("SET statement_timeout TO 30")
             cur.execute(sql)
             cur.fetchall()
             conn.close()
@@ -71,7 +71,7 @@ def main():
 
     # Pre-train with training queries
     print("Executing training queries for initial training")
-    for fp, q in train_queries:
+    for fp, q in train_queries[:25]:
         pg_time = run_query(q, PG_CONNECTION_STR, bao_reward=True)
         print("x", "x", time(), fp, pg_time, "PG", flush=True)
 
