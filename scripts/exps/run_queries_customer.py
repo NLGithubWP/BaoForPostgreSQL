@@ -114,9 +114,72 @@ def main():
         "test_query_44.sql",
     ]
 
+    Executed_query = [
+        "test_query_106.sql",
+        "test_query_142.sql",
+        "test_query_115.sql",
+        "test_query_84.sql",
+        "test_query_52.sql",
+        "test_query_23.sql",
+        "test_query_125.sql",
+        "test_query_62.sql",
+        "test_query_144.sql",
+        "test_query_76.sql",
+        "test_query_111.sql",
+        "test_query_120.sql",
+        "test_query_1.sql",
+        "test_query_137.sql",
+        "test_query_56.sql",
+        "test_query_17.sql",
+        "test_query_27.sql",
+        "test_query_71.sql",
+        "test_query_86.sql",
+        "test_query_101.sql",
+        "test_query_58.sql",
+        "test_query_40.sql",
+        "test_query_39.sql",
+        "test_query_21.sql",
+        "test_query_83.sql",
+        "test_query_99.sql",
+        "test_query_30.sql",
+        "test_query_114.sql",
+        "test_query_97.sql",
+        "test_query_85.sql",
+        "test_query_13.sql",
+        "test_query_46.sql",
+        "test_query_66.sql",
+        "test_query_9.sql",
+        "test_query_126.sql",
+        "test_query_59.sql",
+        "test_query_74.sql",
+        "test_query_60.sql",
+        "test_query_34.sql",
+        "test_query_102.sql",
+        "test_query_139.sql",
+        "test_query_132.sql",
+        "test_query_95.sql",
+        "test_query_122.sql",
+        "test_query_81.sql",
+        "test_query_93.sql",
+        "test_query_18.sql",
+        "test_query_146.sql",
+        "test_query_117.sql",
+        "test_query_113.sql",
+        "test_query_128.sql",
+        "test_query_47.sql",
+        "test_query_107.sql",
+        "test_query_12.sql",
+        "test_query_100.sql",
+        "test_query_75.sql",
+        "test_query_33.sql",
+        "test_query_68.sql",
+        "test_query_145.sql",
+        "test_query_89.sql"
+    ]
+
     test_queries = read_queries(
         [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if
-         f.startswith("test_") and f not in SKIP_QUERIES])
+         f.startswith("test_") and f not in SKIP_QUERIES and f not in Executed_query])
 
     print("Read", len(train_queries), "training queries.", flush=True)
     print("Read", len(test_queries), "testing queries.", flush=True)

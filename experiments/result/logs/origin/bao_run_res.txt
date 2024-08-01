@@ -1,0 +1,91 @@
+---- start online evaluating ----
+1 0 1722546452.622601 ./experiments/query/sample_query_stats_STATS_origin/test_query_106.sql 0.5805637836456299
+1 1 1722546453.2193334 ./experiments/query/sample_query_stats_STATS_origin/test_query_142.sql 0.5966885089874268
+1 2 1722546453.4543595 ./experiments/query/sample_query_stats_STATS_origin/test_query_115.sql 0.23499083518981934
+1 3 1722546453.531043 ./experiments/query/sample_query_stats_STATS_origin/test_query_84.sql 0.07664322853088379
+1 4 1722546480.8950453 ./experiments/query/sample_query_stats_STATS_origin/test_query_52.sql 27.363964557647705
+1 5 1722546484.0232506 ./experiments/query/sample_query_stats_STATS_origin/test_query_23.sql 3.128171443939209
+1 6 1722546484.3490572 ./experiments/query/sample_query_stats_STATS_origin/test_query_125.sql 0.32577061653137207
+1 7 1722546484.6297848 ./experiments/query/sample_query_stats_STATS_origin/test_query_62.sql 0.2806563377380371
+1 8 1722546485.3317666 ./experiments/query/sample_query_stats_STATS_origin/test_query_144.sql 0.7019338607788086
+1 9 1722546486.9468765 ./experiments/query/sample_query_stats_STATS_origin/test_query_76.sql 1.6150729656219482
+1 10 1722546487.1488957 ./experiments/query/sample_query_stats_STATS_origin/test_query_111.sql 0.20196914672851562
+1 11 1722546488.8231199 ./experiments/query/sample_query_stats_STATS_origin/test_query_120.sql 1.6741762161254883
+1 12 1722546489.6225574 ./experiments/query/sample_query_stats_STATS_origin/test_query_1.sql 0.7994003295898438
+1 13 1722546503.5904555 ./experiments/query/sample_query_stats_STATS_origin/test_query_137.sql 13.967848300933838
+1 14 1722546505.832314 ./experiments/query/sample_query_stats_STATS_origin/test_query_56.sql 2.2418103218078613
+1 15 1722546518.4483526 ./experiments/query/sample_query_stats_STATS_origin/test_query_17.sql 12.616002559661865
+1 16 1722546534.786934 ./experiments/query/sample_query_stats_STATS_origin/test_query_27.sql 16.338518142700195
+1 17 1722546534.9861927 ./experiments/query/sample_query_stats_STATS_origin/test_query_71.sql 0.19918155670166016
+1 18 1722546535.1073713 ./experiments/query/sample_query_stats_STATS_origin/test_query_86.sql 0.12113809585571289
+1 19 1722546535.6019886 ./experiments/query/sample_query_stats_STATS_origin/test_query_101.sql 0.49457550048828125
+1 20 1722546537.488025 ./experiments/query/sample_query_stats_STATS_origin/test_query_58.sql 1.8859868049621582
+1 21 1722546537.8666236 ./experiments/query/sample_query_stats_STATS_origin/test_query_40.sql 0.37853264808654785
+1 22 1722546538.3213246 ./experiments/query/sample_query_stats_STATS_origin/test_query_39.sql 0.45466041564941406
+1 23 1722546540.2883654 ./experiments/query/sample_query_stats_STATS_origin/test_query_21.sql 1.9670054912567139
+1 24 1722546548.9789958 ./experiments/query/sample_query_stats_STATS_origin/test_query_83.sql 8.690587282180786
+---- start retraining ----
+/hdd1/xingnaili/AI4QueryOptimizer/baseline/BaoForPostgreSQL/bao_server/model.py:91: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.__net.load_state_dict(torch.load(_nn_path(path)))
+/hdd1/xingnaili/AI4QueryOptimizer/baseline/BaoForPostgreSQL/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1720538622298/work/torch/csrc/utils/tensor_new.cpp:278.)
+  targets = torch.tensor(targets)
+Loading model from bao_default_model
+Initial input channels: 10
+Epoch 0 training loss: 0.12995073655620218
+Epoch 15 training loss: 0.005645784689113498
+Stopped training from convergence condition at epoch 27
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+---- start online evaluating ----
+2 0 1722546558.566753 ./experiments/query/sample_query_stats_STATS_origin/test_query_99.sql 0.2495594024658203
+2 1 1722546559.0102587 ./experiments/query/sample_query_stats_STATS_origin/test_query_30.sql 0.443462610244751
+2 2 1722546560.1103117 ./experiments/query/sample_query_stats_STATS_origin/test_query_114.sql 1.1000056266784668
+2 3 1722546569.3440669 ./experiments/query/sample_query_stats_STATS_origin/test_query_97.sql 9.233718395233154
+2 4 1722546569.4290743 ./experiments/query/sample_query_stats_STATS_origin/test_query_85.sql 0.08496308326721191
+2 5 1722546573.064708 ./experiments/query/sample_query_stats_STATS_origin/test_query_13.sql 3.635593891143799
+2 6 1722546573.2389631 ./experiments/query/sample_query_stats_STATS_origin/test_query_46.sql 0.17421793937683105
+2 7 1722546577.8872445 ./experiments/query/sample_query_stats_STATS_origin/test_query_66.sql 4.648231506347656
+2 8 1722546578.3100421 ./experiments/query/sample_query_stats_STATS_origin/test_query_9.sql 0.4227421283721924
+2 9 1722546579.486631 ./experiments/query/sample_query_stats_STATS_origin/test_query_126.sql 1.1765108108520508
+2 10 1722546579.7340837 ./experiments/query/sample_query_stats_STATS_origin/test_query_59.sql 0.24741554260253906
+2 11 1722546580.3635604 ./experiments/query/sample_query_stats_STATS_origin/test_query_74.sql 0.6294302940368652
+2 12 1722546580.821553 ./experiments/query/sample_query_stats_STATS_origin/test_query_60.sql 0.45795226097106934
+2 13 1722546581.4663644 ./experiments/query/sample_query_stats_STATS_origin/test_query_34.sql 0.644768238067627
+2 14 1722546607.0547915 ./experiments/query/sample_query_stats_STATS_origin/test_query_102.sql 25.588387489318848
+2 15 1722546619.0862887 ./experiments/query/sample_query_stats_STATS_origin/test_query_139.sql 12.03145980834961
+2 16 1722546619.2353392 ./experiments/query/sample_query_stats_STATS_origin/test_query_132.sql 0.14900875091552734
+2 17 1722546619.783024 ./experiments/query/sample_query_stats_STATS_origin/test_query_95.sql 0.5476408004760742
+2 18 1722546621.7817063 ./experiments/query/sample_query_stats_STATS_origin/test_query_122.sql 1.9986402988433838
+2 19 1722546622.0956724 ./experiments/query/sample_query_stats_STATS_origin/test_query_81.sql 0.31391477584838867
+2 20 1722546638.4637568 ./experiments/query/sample_query_stats_STATS_origin/test_query_93.sql 16.368041038513184
+2 21 1722546638.651122 ./experiments/query/sample_query_stats_STATS_origin/test_query_18.sql 0.18732500076293945
+2 22 1722546638.8000073 ./experiments/query/sample_query_stats_STATS_origin/test_query_146.sql 0.14884209632873535
+2 23 1722546645.1509702 ./experiments/query/sample_query_stats_STATS_origin/test_query_117.sql 6.350918769836426
+2 24 1722546645.7695963 ./experiments/query/sample_query_stats_STATS_origin/test_query_113.sql 0.6185753345489502
+---- start retraining ----
+/hdd1/xingnaili/AI4QueryOptimizer/baseline/BaoForPostgreSQL/bao_server/model.py:91: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.__net.load_state_dict(torch.load(_nn_path(path)))
+/hdd1/xingnaili/AI4QueryOptimizer/baseline/BaoForPostgreSQL/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1720538622298/work/torch/csrc/utils/tensor_new.cpp:278.)
+  targets = torch.tensor(targets)
+Loading model from bao_default_model
+Initial input channels: 10
+Epoch 0 training loss: 0.09499661801826387
+Epoch 15 training loss: 0.006741177911559741
+Epoch 30 training loss: 0.0037143010745889376
+Epoch 45 training loss: 0.002102726923545734
+Stopped training from convergence condition at epoch 54
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+---- start online evaluating ----
+3 0 1722546669.1605563 ./experiments/query/sample_query_stats_STATS_origin/test_query_128.sql 0.21665501594543457
+3 1 1722546669.3463566 ./experiments/query/sample_query_stats_STATS_origin/test_query_47.sql 0.18572378158569336
+3 2 1722546669.9411116 ./experiments/query/sample_query_stats_STATS_origin/test_query_107.sql 0.5947086811065674
+3 3 1722546670.205526 ./experiments/query/sample_query_stats_STATS_origin/test_query_12.sql 0.2643585205078125
+3 4 1722546670.5311248 ./experiments/query/sample_query_stats_STATS_origin/test_query_100.sql 0.3255479335784912
+3 5 1722546670.8754358 ./experiments/query/sample_query_stats_STATS_origin/test_query_75.sql 0.34426379203796387
+3 6 1722546671.0372708 ./experiments/query/sample_query_stats_STATS_origin/test_query_33.sql 0.1617746353149414
+3 7 1722546671.795793 ./experiments/query/sample_query_stats_STATS_origin/test_query_68.sql 0.7584772109985352
+3 8 1722546672.1103106 ./experiments/query/sample_query_stats_STATS_origin/test_query_145.sql 0.3144819736480713
+3 9 1722546672.8091664 ./experiments/query/sample_query_stats_STATS_origin/test_query_89.sql 0.6988153457641602
