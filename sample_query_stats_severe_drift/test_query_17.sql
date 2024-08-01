@@ -1,0 +1,1 @@
+select count(*) from badges as b, posthistory as ph, posts as p, users as u where b.userid = p.owneruserid and p.owneruserid = ph.userid and ph.userid = u.id and p.answercount >= 0 and p.creationdate <= 1409686355 and p.favoritecount >= 0 and u.creationdate <= 1410531709;

@@ -1,0 +1,1 @@
+select count(*) from comments as c, posthistory as ph, postlinks as pl, posts as p, votes as v where c.postid = p.id and p.id = ph.postid and ph.postid = pl.postid and pl.postid = v.postid and p.commentcount >= 0 and p.favoritecount >= 0 and p.posttypeid = 2 and p.score >= -2;

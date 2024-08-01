@@ -1,0 +1,1 @@
+select count(*) from comments as c, posts as p, users as u, votes as v where c.postid = p.id and p.id = v.postid and p.lasteditoruserid = u.id and u.creationdate <= 1408713024 and u.upvotes <= 17 and u.upvotes >= 0;

@@ -1,0 +1,1 @@
+select count(*) from comments as c, posthistory as ph, posts as p, votes as v where c.userid = p.owneruserid and p.owneruserid = ph.userid and ph.userid = v.userid and c.creationdate <= 1410522434 and p.commentcount <= 16 and p.favoritecount = 0 and p.score <= 53 and ph.posthistorytypeid = 3 and v.bountyamount <= 150 and v.votetypeid = 2;

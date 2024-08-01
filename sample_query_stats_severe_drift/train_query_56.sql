@@ -1,0 +1,1 @@
+select count(*) from badges as b, posthistory as ph, posts as p, users as u where b.userid = p.owneruserid and p.owneruserid = ph.userid and ph.userid = u.id and p.posttypeid = 2 and u.downvotes <= 0 and u.downvotes >= 0 and u.reputation = 101 and u.upvotes <= 368 and u.views >= 0;

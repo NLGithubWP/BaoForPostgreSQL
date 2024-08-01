@@ -1,0 +1,1 @@
+select count(*) from posts as p, users as u, votes as v where p.owneruserid = u.id and u.id = v.userid and p.commentcount >= 0 and p.favoritecount >= 0 and p.score <= 19 and p.score >= 0 and u.upvotes <= 36 and v.creationdate <= 1410364800 and v.creationdate >= 1280160000;

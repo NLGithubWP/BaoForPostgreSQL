@@ -1,0 +1,1 @@
+select count(*) from posthistory as ph, posts as p, users as u where p.owneruserid = ph.userid and ph.userid = u.id and p.favoritecount <= 5 and ph.creationdate >= 1305888183 and u.creationdate <= 1408338022 and u.creationdate >= 1290865609 and u.upvotes >= 0 and u.views >= 0;

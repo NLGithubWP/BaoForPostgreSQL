@@ -1,0 +1,1 @@
+select count(*) from comments as c, posthistory as ph where c.userid = ph.userid and ph.creationdate >= 1284436747 and ph.posthistorytypeid = 1;

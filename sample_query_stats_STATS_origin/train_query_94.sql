@@ -1,0 +1,1 @@
+select count(*) from badges as b, comments as c, users as u where b.userid = c.userid and c.userid = u.id and c.score = 0 and u.reputation <= 133 and u.reputation >= 1;

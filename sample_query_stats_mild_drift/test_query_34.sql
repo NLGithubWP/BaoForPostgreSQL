@@ -1,0 +1,1 @@
+select count(*) from badges as b, posthistory as ph, posts as p, users as u where b.userid = p.owneruserid and p.owneruserid = ph.userid and ph.userid = u.id and b.date >= 1279593250 and p.viewcount <= 2024 and p.viewcount >= 0 and ph.posthistorytypeid = 5 and u.reputation <= 750 and u.reputation >= 1;

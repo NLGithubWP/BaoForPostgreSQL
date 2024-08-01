@@ -1,0 +1,1 @@
+select count(*) from badges as b, comments as c, posthistory as ph, users as u, votes as v where b.userid = c.userid and c.userid = ph.userid and ph.userid = u.id and u.id = v.userid and b.date <= 1410437750 and c.score = 1 and ph.creationdate <= 1408287433 and ph.posthistorytypeid = 5 and u.upvotes = 0 and u.views <= 260 and u.views >= 0 and v.votetypeid = 2;
