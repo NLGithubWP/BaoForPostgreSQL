@@ -123,7 +123,7 @@ def main():
     print("Using Bao:", USE_BAO, flush=True)
 
     # Pre-train with training queries
-    print("---- Executing training queries for initial training ---- ")
+    print("---- Executing training queries for initial training ---- ", flush=True)
     for fp, q in train_queries[:25]:
         pg_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=True)
         print("x", "x", time(), fp, pg_time, "PG", flush=True)
@@ -132,14 +132,14 @@ def main():
     chunk_size = 25 if len(test_queries) >= 25 else len(test_queries)
     bao_chunks = list(chunks(test_queries, chunk_size))
 
-    print(f"---begin online learning with {len(bao_chunks)} and each with {len(bao_chunks[0])}---")
+    print(f"---begin online learning with {len(bao_chunks)} and each with {len(bao_chunks[0])}---", flush=True)
 
     for c_idx, chunk in enumerate(bao_chunks):
         if USE_BAO:
-            print("---- start retraining ---- ")
+            print("---- start retraining ---- ", flush=True)
             os.system("cd bao_server && CUDA_VISIBLE_DEVICES=1 python3 baoctl.py --retrain")
             os.system("sync")
-        print("---- start online evaluating ---- ")
+        print("---- start online evaluating ---- ", flush=True)
         for q_idx, (fp, q) in enumerate(chunk):
             q_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=USE_BAO, bao_select=USE_BAO)
             print(c_idx, q_idx, time(), fp, q_time, flush=True)
