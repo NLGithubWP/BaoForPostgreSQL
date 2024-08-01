@@ -28,17 +28,20 @@ def run_query(fq, sql, conn_str, bao_select=False, bao_reward=False):
     start = time()
     while True:
         try:
+            print(f"[debug] Connectting for file: {fq}")
             conn = psycopg2.connect(conn_str)
             cur = conn.cursor()
-            print(f"Connected, Executing query from file: {fq}")
+            print(f"[debug] Connected, Executing query file: {fq}")
             cur.execute(f"SET enable_bao TO {bao_select or bao_reward}")
             cur.execute(f"SET enable_bao_selection TO {bao_select}")
             cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
             cur.execute("SET bao_num_arms TO 5")
             cur.execute("SET statement_timeout TO 500")
             cur.execute(sql)
+            print(f"[debug] Done with exeuction query file: {fq}")
             cur.fetchall()
             conn.close()
+            print(f"[debug] Discinnected")
             break
         except Exception as e:
             print(f"Error executing query: {e}")
