@@ -25,6 +25,7 @@ def read_queries(query_paths):
 
 
 def run_query(fq, sql, conn_str, bao_select=False, bao_reward=False):
+    print(f"[debug] run_query for file: {fq}")
     start = time()
     while True:
         try:
