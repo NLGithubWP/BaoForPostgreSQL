@@ -24,12 +24,13 @@ def read_queries(query_paths):
     return queries
 
 
-def run_query(sql, conn_str, bao_select=False, bao_reward=False):
+def run_query(fq, sql, conn_str, bao_select=False, bao_reward=False):
     start = time()
     while True:
         try:
             conn = psycopg2.connect(conn_str)
             cur = conn.cursor()
+            print(f"Executing query from file: {fq}")
             cur.execute(f"SET enable_bao TO {bao_select or bao_reward}")
             cur.execute(f"SET enable_bao_selection TO {bao_select}")
             cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
@@ -72,7 +73,7 @@ def main():
     # Pre-train with training queries
     print("Executing training queries for initial training")
     for fp, q in train_queries[:25]:
-        pg_time = run_query(q, PG_CONNECTION_STR, bao_reward=True)
+        pg_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=True)
         print("x", "x", time(), fp, pg_time, "PG", flush=True)
 
     # Determine chunk size for testing queries
@@ -88,7 +89,7 @@ def main():
             os.system("cd bao_server && CUDA_VISIBLE_DEVICES=1 python3 baoctl.py --retrain")
             os.system("sync")
         for q_idx, (fp, q) in enumerate(chunk):
-            q_time = run_query(q, PG_CONNECTION_STR, bao_reward=USE_BAO, bao_select=USE_BAO)
+            q_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=USE_BAO, bao_select=USE_BAO)
             print(c_idx, q_idx, time(), fp, q_time, flush=True)
 
 
