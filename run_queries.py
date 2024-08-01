@@ -3,9 +3,10 @@ import os
 import sys
 import random
 from time import time, sleep
+from pprint import pprint
 
 USE_BAO = True
-PG_CONNECTION_STR = "dbname=imdb user=imdb host=localhost"
+PG_CONNECTION_STR = "dbname=imdb user=postgres host=localhost"
 
 # https://stackoverflow.com/questions/312443/
 def chunks(lst, n):
@@ -51,6 +52,7 @@ pg_chunks, *bao_chunks = list(chunks(query_sequence, 25))
 
 print("Executing queries using PG optimizer for initial training")
 
+# file path and query
 for fp, q in pg_chunks:
     pg_time = run_query(q, bao_reward=True)
     print("x", "x", time(), fp, pg_time, "PG", flush=True)

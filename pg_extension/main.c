@@ -16,7 +16,7 @@
 #include "utils/guc.h"
 #include "commands/explain.h"
 #include "tcop/tcopprot.h"
-
+#include "nodes/nodes.h"  // Required for nodeToString
 
 
 PG_MODULE_MAGIC;
@@ -297,7 +297,15 @@ static void bao_ExplainOneQuery(Query* query, int cursorOptions, IntoClause* int
   bool old_selection_val;
   bool connected = false;
 
-  
+  elog(WARNING, "Begin serialize the query");
+  char *queryStr = nodeToString(query);
+  if (queryStr != NULL) {
+       ExplainPropertyText("Serialized Query", queryStr, es);
+      // Free the serialized query string if necessary
+  } else {
+      ExplainPropertyText("Serialized Query", "Failed to serialize query", es);
+  }
+
   // If there are no other EXPLAIN hooks, add to the EXPLAIN output Bao's estimate
   // of this query plan's execution time, as well as what hints would be used
   // by Bao.

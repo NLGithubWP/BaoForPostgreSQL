@@ -1,0 +1,22 @@
+# Use postgres:12 as the base image
+FROM postgres:12
+
+# Set environment variables to make Conda installation non-interactive
+ENV CONDA_AUTO_UPDATE_CONDA=false \
+    PATH=/root/miniconda3/bin:$PATH
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y wget
+
+# Download and install Miniconda
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh \
+    && /bin/bash /tmp/miniconda.sh -b -p /root/miniconda3 \
+    && rm /tmp/miniconda.sh \
+    && conda clean -tipsy
+
+# Further customizations, if necessary
+# ...
+
+# Start the PostgreSQL server
+CMD ["postgres"]
+![](each_query.jpg)
