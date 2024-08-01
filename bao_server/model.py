@@ -81,6 +81,7 @@ class BaoRegression:
         return self.__n
             
     def load(self, path):
+        print(f"Loading model from {path}")
         with open(_n_path(path), "rb") as f:
             self.__n = joblib.load(f)
         with open(_channels_path(path), "rb") as f:
