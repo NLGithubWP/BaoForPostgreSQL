@@ -1,1 +1,0 @@
-select count(*) from posthistory as ph, posts as p, users as u where p.id = ph.postid and p.owneruserid = u.id and p.creationdate <= 1409439492 and p.creationdate >= 1282043285 and u.upvotes <= 9 and u.upvotes >= 0;

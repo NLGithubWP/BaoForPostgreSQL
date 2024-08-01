@@ -1,1 +1,0 @@
-select count(*) from badges as b, posts as p, users as u, votes as v where b.userid = p.owneruserid and p.owneruserid = u.id and u.id = v.userid and b.date <= 1409643307 and b.date >= 1294059019 and p.answercount <= 8 and p.score <= 48 and u.creationdate >= 1289858584 and v.creationdate <= 1409932800;

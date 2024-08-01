@@ -1,0 +1,1 @@
+select count(*) from posthistory as ph, posts as p, users as u, votes as v where p.id = ph.postid and p.owneruserid = u.id and ph.postid = v.postid and p.score <= 9 and p.score >= -2 and ph.posthistorytypeid = 5 and u.creationdate >= 1279539805 and u.downvotes >= 0 and u.upvotes <= 47 and u.upvotes >= 0;

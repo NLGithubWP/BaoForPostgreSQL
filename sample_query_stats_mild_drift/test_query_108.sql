@@ -1,1 +1,0 @@
-select count(*) from posthistory as ph, posts as p, users as u where p.owneruserid = ph.userid and ph.userid = u.id and p.commentcount <= 23 and p.commentcount >= 0 and p.score >= -1 and u.downvotes = 0 and u.upvotes <= 244 and u.upvotes >= 0;

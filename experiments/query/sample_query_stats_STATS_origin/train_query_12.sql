@@ -1,0 +1,1 @@
+select count(*) from posthistory as ph, postlinks as pl, posts as p where p.id = ph.postid and ph.postid = pl.postid and pl.creationdate <= 1408425431 and pl.creationdate >= 1289495162 and pl.linktypeid = 1;

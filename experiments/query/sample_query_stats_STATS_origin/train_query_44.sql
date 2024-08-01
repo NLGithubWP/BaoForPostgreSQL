@@ -1,0 +1,1 @@
+select count(*) from posthistory as ph, posts as p, users as u, votes as v where p.id = ph.postid and p.owneruserid = u.id and ph.postid = v.postid and p.answercount <= 3 and p.creationdate >= 1283902973 and p.score <= 15 and p.score >= -3;

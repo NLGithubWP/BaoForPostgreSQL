@@ -1,1 +1,0 @@
-select count(*) from badges as b, comments as c, posthistory as ph, users as u where b.userid = c.userid and c.userid = ph.userid and ph.userid = u.id and b.date <= 1409671996 and ph.creationdate <= 1406872582 and ph.posthistorytypeid = 2 and u.creationdate <= 1406803716 and u.creationdate >= 1280221830 and u.downvotes >= 0 and u.upvotes <= 62 and u.upvotes >= 0 and u.views >= 0;

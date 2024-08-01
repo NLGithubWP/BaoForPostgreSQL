@@ -1,1 +1,0 @@
-select count(*) from badges as b, comments as c, users as u, votes as v where b.userid = c.userid and c.userid = u.id and u.id = v.userid and u.downvotes <= 0 and u.reputation <= 143 and u.reputation >= 1 and v.votetypeid = 3;

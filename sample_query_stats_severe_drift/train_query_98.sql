@@ -1,1 +1,0 @@
-select count(*) from comments as c, posts as p, users as u where c.userid = p.owneruserid and p.owneruserid = u.id and p.favoritecount <= 8 and p.posttypeid = 2 and u.reputation >= 1;

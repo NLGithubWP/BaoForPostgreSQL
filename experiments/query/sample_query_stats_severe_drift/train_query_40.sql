@@ -1,0 +1,1 @@
+select count(*) from posts as p, users as u, votes as v where p.owneruserid = u.id and u.id = v.userid and u.creationdate <= 1408885922 and u.downvotes = 0 and u.upvotes <= 15 and v.creationdate >= 1279468800 and v.votetypeid = 2;

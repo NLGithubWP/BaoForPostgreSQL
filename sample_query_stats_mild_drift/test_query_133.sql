@@ -1,1 +1,0 @@
-select count(*) from badges as b, posthistory as ph, posts as p, tags as t, users as u where b.userid = p.owneruserid and p.id = t.excerptpostid and p.owneruserid = ph.userid and ph.userid = u.id and b.date <= 1408645315 and p.commentcount >= 0 and u.downvotes <= 0;

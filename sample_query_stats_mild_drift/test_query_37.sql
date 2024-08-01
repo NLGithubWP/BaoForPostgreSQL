@@ -1,1 +1,0 @@
-select count(*) from comments as c, posts as p, users as u, votes as v where c.postid = p.id and c.userid = u.id and p.id = v.postid and c.score = 0 and u.views <= 74 and u.views >= 0;

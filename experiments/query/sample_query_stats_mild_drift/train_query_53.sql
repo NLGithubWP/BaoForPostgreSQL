@@ -1,0 +1,1 @@
+select count(*) from comments as c, posts as p, users as u where c.userid = p.owneruserid and p.owneruserid = u.id and c.creationdate <= 1409620108 and c.creationdate >= 1280141747 and c.score = 1 and p.answercount <= 3 and p.commentcount >= 0 and p.score <= 20 and p.score >= -3 and u.creationdate <= 1409834529 and u.downvotes >= 0;

@@ -1,1 +1,0 @@
-select count(*) from badges as b, users as u where b.userid = u.id and u.downvotes <= 1;

@@ -1,1 +1,0 @@
-select count(*) from comments as c, posts as p, users as u where c.userid = p.owneruserid and p.owneruserid = u.id and c.score = 0 and p.answercount <= 3 and p.commentcount <= 10 and p.score <= 15 and p.score >= 0 and p.viewcount <= 3002 and p.viewcount >= 0 and u.creationdate <= 1409622606 and u.creationdate >= 1282551670 and u.downvotes <= 0 and u.upvotes >= 0;

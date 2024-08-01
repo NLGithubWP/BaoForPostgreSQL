@@ -1,0 +1,1 @@
+select count(*) from comments as c, posthistory as ph, postlinks as pl, votes as v where c.postid = ph.postid and ph.postid = pl.postid and pl.postid = v.postid and pl.creationdate <= 1405419548 and pl.creationdate >= 1303989177;

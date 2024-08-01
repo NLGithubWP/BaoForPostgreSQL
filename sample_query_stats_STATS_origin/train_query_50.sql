@@ -1,1 +1,0 @@
-select count(*) from posts as p, users as u, votes as v where p.owneruserid = u.id and u.id = v.userid and u.upvotes <= 18;

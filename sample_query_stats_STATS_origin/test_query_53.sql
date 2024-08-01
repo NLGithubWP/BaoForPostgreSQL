@@ -1,1 +1,0 @@
-select count(*) from comments as c, posthistory as ph, posts as p, users as u, votes as v where c.userid = p.owneruserid and p.owneruserid = ph.userid and ph.userid = u.id and u.id = v.userid and p.answercount <= 4 and p.answercount >= 0 and p.commentcount >= 0 and p.favoritecount <= 2 and p.score <= 13 and ph.posthistorytypeid = 3 and u.downvotes >= 0 and v.bountyamount <= 50;

@@ -1,1 +1,0 @@
-select count(*) from posts as p, users as u, votes as v where p.owneruserid = u.id and u.id = v.userid and p.posttypeid = 1 and u.creationdate <= 1408987901 and u.reputation <= 423 and u.reputation >= 1 and v.creationdate <= 1409932800 and v.creationdate >= 1280332800;

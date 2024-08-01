@@ -1,1 +1,0 @@
-select count(*) from posts as p, users as u, votes as v where p.owneruserid = u.id and u.id = v.userid and p.viewcount >= 0 and u.views <= 106 and u.views >= 0;

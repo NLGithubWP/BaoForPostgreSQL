@@ -1,1 +1,0 @@
-select count(*) from badges as b, posthistory as ph, users as u, votes as v where b.userid = ph.userid and ph.userid = u.id and u.id = v.userid and u.views >= 0;

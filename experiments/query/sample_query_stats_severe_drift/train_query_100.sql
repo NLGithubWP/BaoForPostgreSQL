@@ -1,0 +1,1 @@
+select count(*) from badges as b, posts as p, users as u, votes as v where b.userid = p.owneruserid and p.owneruserid = u.id and u.id = v.userid and b.date <= 1409144082 and p.viewcount <= 10226 and u.creationdate >= 1280835760 and u.downvotes >= 0 and u.upvotes <= 13;

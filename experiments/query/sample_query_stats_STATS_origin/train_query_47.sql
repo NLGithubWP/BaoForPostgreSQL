@@ -1,0 +1,1 @@
+select count(*) from comments as c, posts as p, users as u where c.userid = p.owneruserid and p.owneruserid = u.id and p.favoritecount <= 5 and u.creationdate >= 1289108689 and u.reputation <= 450;

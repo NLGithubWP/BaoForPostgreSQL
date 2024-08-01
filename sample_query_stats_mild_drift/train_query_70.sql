@@ -1,1 +1,0 @@
-select count(*) from posthistory as ph, posts as p, users as u where p.id = ph.postid and p.owneruserid = u.id and ph.creationdate >= 1290587023 and u.creationdate <= 1409028816 and u.reputation <= 748;

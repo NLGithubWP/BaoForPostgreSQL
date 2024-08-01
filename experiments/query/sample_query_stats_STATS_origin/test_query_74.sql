@@ -1,0 +1,1 @@
+select count(*) from comments as c, users as u, votes as v where c.userid = u.id and u.id = v.userid and u.creationdate <= 1404909430 and u.creationdate >= 1279541508 and v.creationdate <= 1410364800;

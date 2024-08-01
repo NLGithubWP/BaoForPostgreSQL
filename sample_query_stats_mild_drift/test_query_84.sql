@@ -1,1 +1,0 @@
-select count(*) from postlinks as pl, posts as p, users as u where p.id = pl.postid and p.owneruserid = u.id and p.commentcount <= 17 and u.creationdate <= 1410477136;

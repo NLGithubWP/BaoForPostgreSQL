@@ -1,0 +1,1 @@
+select count(*) from badges as b, posthistory as ph, posts as p, users as u where b.userid = p.owneruserid and p.owneruserid = ph.userid and ph.userid = u.id and p.posttypeid = 2 and ph.creationdate <= 1358209363 and ph.creationdate >= 1261908499;

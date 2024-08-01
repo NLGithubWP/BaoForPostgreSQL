@@ -1,1 +1,0 @@
-select count(*) from posts as p, tags as t, votes as v where p.id = t.excerptpostid and p.owneruserid = v.userid and p.creationdate <= 1410181474 and t.count >= 1 and v.creationdate >= 1279555200;

@@ -1,1 +1,0 @@
-select count(*) from badges as b, comments as c, users as u, votes as v where b.userid = c.userid and c.userid = u.id and u.id = v.userid and b.date <= 1408415533 and c.creationdate >= 1282889527 and c.score = 1 and u.reputation >= 1 and v.creationdate <= 1410537600 and v.creationdate >= 1279468800 and v.votetypeid = 5;

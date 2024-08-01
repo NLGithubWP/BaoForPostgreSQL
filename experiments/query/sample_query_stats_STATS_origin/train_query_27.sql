@@ -1,0 +1,1 @@
+select count(*) from badges as b, comments as c where b.userid = c.userid and c.score = 0;

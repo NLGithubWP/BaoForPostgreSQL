@@ -1,1 +1,0 @@
-select count(*) from badges as b, posthistory as ph, posts as p, users as u where b.userid = p.owneruserid and p.owneruserid = ph.userid and ph.userid = u.id and p.score >= 1 and ph.creationdate >= 1277913600 and u.creationdate <= 1380681840 and u.creationdate >= 1283280966;

@@ -1,1 +1,0 @@
-select count(*) from comments as c, posthistory as ph, postlinks as pl, votes as v where c.postid = ph.postid and ph.postid = pl.postid and pl.postid = v.postid and c.creationdate <= 1410421801 and c.creationdate >= 1282649844 and c.score = 0;

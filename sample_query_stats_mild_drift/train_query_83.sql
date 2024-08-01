@@ -1,1 +1,0 @@
-select count(*) from badges as b, postlinks as pl, posts as p, users as u where b.userid = p.owneruserid and p.id = pl.relatedpostid and p.owneruserid = u.id and pl.linktypeid = 1 and u.creationdate <= 1409419227 and u.upvotes >= 0;

@@ -1,0 +1,1 @@
+select count(*) from comments as c, posthistory as ph where c.userid = ph.userid and c.score = 4;

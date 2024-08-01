@@ -1,0 +1,1 @@
+select count(*) from badges as b, comments as c, posthistory as ph, users as u where b.userid = c.userid and c.userid = ph.userid and ph.userid = u.id and c.creationdate <= 1409722652 and c.creationdate >= 1280385070 and ph.creationdate >= 1290620006 and ph.posthistorytypeid = 3 and u.downvotes <= 0 and u.downvotes >= 0 and u.upvotes <= 608 and u.upvotes >= 0;

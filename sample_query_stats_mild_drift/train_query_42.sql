@@ -1,1 +1,0 @@
-select count(*) from comments as c, postlinks as pl, posts as p, votes as v where c.postid = p.id and p.id = pl.postid and pl.postid = v.postid and v.votetypeid = 2;

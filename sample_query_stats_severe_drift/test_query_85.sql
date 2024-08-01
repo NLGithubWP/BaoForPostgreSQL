@@ -1,1 +1,0 @@
-select count(*) from badges as b, comments as c, postlinks as pl, posts as p, users as u where b.userid = p.owneruserid and c.postid = p.id and p.id = pl.relatedpostid and p.owneruserid = u.id and p.favoritecount >= 0 and p.score = 1 and p.viewcount >= 0 and pl.creationdate >= 1302593039 and pl.linktypeid = 1 and u.creationdate >= 1297159897;

@@ -1,0 +1,1 @@
+select count(*) from comments as c, posthistory as ph, users as u where c.userid = ph.userid and ph.userid = u.id and c.creationdate <= 1410268449 and c.score = 0 and u.downvotes >= 0 and u.upvotes <= 244 and u.upvotes >= 0;

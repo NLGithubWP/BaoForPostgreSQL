@@ -1,1 +1,0 @@
-select count(*) from badges as b, posts as p, users as u, votes as v where b.userid = p.owneruserid and p.owneruserid = u.id and u.id = v.userid and p.commentcount <= 15 and p.commentcount >= 0 and p.posttypeid = 1 and u.downvotes <= 1 and u.downvotes >= 0 and u.reputation >= 1;

@@ -1,1 +1,0 @@
-select count(*) from posthistory as ph, posts as p, users as u, votes as v where p.id = ph.postid and p.owneruserid = u.id and ph.postid = v.postid and p.answercount <= 4 and p.answercount >= 0 and p.posttypeid = 1 and ph.creationdate <= 1406525135 and u.creationdate <= 1407452609 and u.downvotes = 0 and v.creationdate <= 1409673600 and v.creationdate >= 1279555200;

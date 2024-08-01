@@ -1,1 +1,0 @@
-select count(*) from posts as p, tags as t, votes as v where p.id = t.excerptpostid and p.owneruserid = v.userid and p.commentcount <= 18 and p.commentcount >= 0 and v.creationdate >= 1279468800 and v.votetypeid = 2;

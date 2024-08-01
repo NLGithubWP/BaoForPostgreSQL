@@ -1,1 +1,0 @@
-select count(*) from badges as b, posts as p, tags as t, users as u, votes as v where b.userid = p.owneruserid and p.id = t.excerptpostid and p.owneruserid = u.id and u.id = v.userid and b.date <= 1410497782 and u.creationdate <= 1410068801 and u.upvotes >= 0 and u.views <= 515 and u.views >= 0 and v.bountyamount <= 200 and v.bountyamount >= 0;

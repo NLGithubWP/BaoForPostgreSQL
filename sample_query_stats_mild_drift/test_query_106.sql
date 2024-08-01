@@ -1,1 +1,0 @@
-select count(*) from badges as b, posts as p, tags as t, users as u, votes as v where b.userid = p.owneruserid and p.id = t.excerptpostid and p.owneruserid = u.id and u.id = v.userid and u.downvotes >= 0;

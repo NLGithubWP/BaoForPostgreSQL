@@ -1,1 +1,0 @@
-select count(*) from comments as c, users as u, votes as v where c.userid = u.id and u.id = v.userid and c.creationdate >= 1281434145 and u.reputation <= 691 and u.reputation >= 1;

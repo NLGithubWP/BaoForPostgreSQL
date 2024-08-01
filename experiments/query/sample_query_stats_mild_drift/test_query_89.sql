@@ -1,0 +1,1 @@
+select count(*) from badges as b, posts as p, users as u, votes as v where b.userid = p.owneruserid and p.id = v.postid and p.owneruserid = u.id and p.score <= 22 and u.reputation >= 1;

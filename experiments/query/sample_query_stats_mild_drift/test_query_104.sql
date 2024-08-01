@@ -1,0 +1,1 @@
+select count(*) from comments as c, postlinks as pl, posts as p where c.userid = p.owneruserid and p.id = pl.postid and c.score = 0 and p.creationdate <= 1410487341 and p.creationdate >= 1283705901 and pl.creationdate >= 1310222144 and pl.linktypeid = 1;

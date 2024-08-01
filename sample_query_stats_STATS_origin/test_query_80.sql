@@ -1,1 +1,0 @@
-select count(*) from posthistory as ph, posts as p, users as u, votes as v where p.id = ph.postid and p.owneruserid = u.id and ph.postid = v.postid and p.commentcount <= 11 and p.commentcount >= 0 and p.posttypeid = 1 and p.score >= -1;

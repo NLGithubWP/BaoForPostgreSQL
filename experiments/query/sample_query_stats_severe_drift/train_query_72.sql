@@ -1,0 +1,1 @@
+select count(*) from badges as b, comments as c where b.userid = c.userid and b.date >= 1280206724 and c.score = 0;

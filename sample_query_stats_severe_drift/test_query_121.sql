@@ -1,1 +1,0 @@
-select count(*) from badges as b, posts as p where b.userid = p.owneruserid and b.date <= 1410396952 and p.answercount <= 4 and p.answercount >= 0 and p.commentcount <= 17 and p.commentcount >= 0;

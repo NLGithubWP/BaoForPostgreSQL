@@ -1,1 +1,0 @@
-select count(*) from posts as p, users as u, votes as v where p.owneruserid = u.id and u.id = v.userid and p.commentcount >= 0 and u.upvotes <= 34 and u.upvotes >= 0;

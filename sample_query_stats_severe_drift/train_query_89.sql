@@ -1,1 +1,0 @@
-select count(*) from comments as c, posts as p, users as u, votes as v where c.postid = p.id and p.id = v.postid and p.lasteditoruserid = u.id and c.score = 0 and p.creationdate >= 1279539679 and u.creationdate <= 1409176975 and u.reputation <= 363;

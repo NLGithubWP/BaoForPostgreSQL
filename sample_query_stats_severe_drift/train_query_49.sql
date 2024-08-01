@@ -1,1 +1,0 @@
-select count(*) from posts as p, users as u, votes as v where p.owneruserid = u.id and u.id = v.userid and p.favoritecount >= 0 and u.downvotes >= 0 and u.upvotes >= 0 and v.creationdate <= 1410451200 and v.votetypeid = 2;

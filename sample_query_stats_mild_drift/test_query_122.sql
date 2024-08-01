@@ -1,1 +1,0 @@
-select count(*) from badges as b, comments as c, posthistory as ph, posts as p, users as u, votes as v where b.userid = p.owneruserid and c.postid = p.id and p.id = ph.postid and p.owneruserid = u.id and ph.postid = v.postid and p.commentcount <= 12 and p.commentcount >= 0 and p.favoritecount >= 0 and p.posttypeid = 1 and v.bountyamount <= 50;

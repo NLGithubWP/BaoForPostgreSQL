@@ -1,0 +1,1 @@
+select count(*) from badges as b, comments as c, posthistory as ph, posts as p, users as u, votes as v where b.userid = p.owneruserid and c.postid = p.id and p.id = ph.postid and p.owneruserid = u.id and ph.postid = v.postid and p.answercount <= 5 and p.posttypeid = 1 and p.score <= 192 and p.viewcount <= 2772 and p.viewcount >= 0 and u.downvotes >= 0;

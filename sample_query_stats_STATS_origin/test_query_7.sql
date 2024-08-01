@@ -1,1 +1,0 @@
-select count(*) from comments as c, posthistory as ph, posts as p where c.postid = p.id and p.id = ph.postid and p.commentcount <= 25 and p.commentcount >= 0;

@@ -1,0 +1,1 @@
+select count(*) from comments as c, posthistory as ph, postlinks as pl, posts as p, votes as v where c.postid = p.id and p.id = ph.postid and ph.postid = pl.postid and pl.postid = v.postid and c.creationdate <= 1410288155 and p.answercount >= 0 and p.creationdate >= 1280390241 and p.score >= -1 and p.viewcount <= 5896 and v.votetypeid = 2;

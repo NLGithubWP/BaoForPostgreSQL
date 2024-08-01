@@ -1,0 +1,1 @@
+select count(*) from posthistory as ph, posts as p, users as u where p.id = ph.postid and p.owneruserid = u.id and p.creationdate >= 1279543041 and ph.creationdate <= 1409726426 and u.downvotes <= 8 and u.downvotes >= 0 and u.reputation >= 1;
