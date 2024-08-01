@@ -80,7 +80,7 @@ def main():
 
     for c_idx, chunk in enumerate(bao_chunks):
         if USE_BAO:
-            os.system("cd bao_server && python3 baoctl.py --retrain")
+            os.system("cd bao_server && CUDA_VISIBLE_DEVICES=1 python3 baoctl.py --retrain")
             os.system("sync")
         for q_idx, (fp, q) in enumerate(chunk):
             q_time = run_query(q, bao_reward=USE_BAO, bao_select=USE_BAO)
