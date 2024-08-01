@@ -10,12 +10,11 @@ if len(sys.argv) != 3:
     sys.exit(1)
 
 # Configuration
-DB_HOST = "localhost"
-DB_USER = "postgres"
 QUERY_FOLDER = sys.argv[1]
 DB_NAME = sys.argv[2]
-LOG_FILE = "./execution_log.txt"
 MAX_TIME = 0
+
+PG_CONNECTION_STR = f"dbname={DB_NAME} user=postgres password=123 host=localhost"
 
 # List of test queries to skip
 SKIP_QUERIES = [
@@ -47,7 +46,7 @@ def execute_sql_file(sql_file):
     print(f"Executing query from file: {sql_file}\n")
 
     try:
-        conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, host=DB_HOST)
+        conn = psycopg2.connect(PG_CONNECTION_STR)
         cur = conn.cursor()
         with open(sql_file, 'r') as file:
             query = file.read()
