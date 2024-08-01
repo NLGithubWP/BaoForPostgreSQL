@@ -35,7 +35,7 @@ def run_query(fq, sql, conn_str, bao_select=False, bao_reward=False):
             cur.execute(f"SET enable_bao_selection TO {bao_select}")
             cur.execute(f"SET enable_bao_rewards TO {bao_reward}")
             cur.execute("SET bao_num_arms TO 5")
-            cur.execute("SET statement_timeout TO 30")
+            cur.execute("SET statement_timeout TO 500")
             cur.execute(sql)
             cur.fetchall()
             conn.close()
@@ -112,6 +112,7 @@ def main():
         "test_query_54.sql",
         "test_query_53.sql",
         "test_query_69.sql",
+        "test_query_44.sql",
     ]
 
     test_queries = read_queries(
