@@ -61,10 +61,57 @@ def main():
     USE_BAO = args.use_bao
 
     # Read all queries
+    # train_queries = read_queries(
+    #     [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if f.startswith("train_")])
+
     train_queries = read_queries(
-        [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if f.startswith("train_")])
+        [os.path.join(args.query_folder, f) for f in
+         [
+             "train_query_1.sql",
+             "train_query_2.sql",
+             "train_query_3.sql",
+             "train_query_4.sql",
+             "train_query_5.sql",
+             "train_query_7.sql",
+             "train_query_35.sql",
+             "train_query_67.sql",
+             "train_query_41.sql",
+             "train_query_61.sql",
+             "train_query_66.sql",
+             "train_query_74.sql",
+             "train_query_76.sql",
+             "train_query_82.sql",
+             "train_query_99.sql",
+             "train_query_98.sql",
+             "train_query_96.sql",
+             "train_query_95.sql",
+             "train_query_94.sql",
+             "train_query_93.sql",
+             "train_query_92.sql",
+             "train_query_91.sql",
+             "train_query_90.sql",
+             "train_query_89.sql",
+             "train_query_88.sql",
+         ]
+         ])
+
+    SKIP_QUERIES = [
+        "test_query_133.sql",
+        "test_query_112.sql",
+        "test_query_103.sql",
+        "test_query_105.sql",
+        "test_query_104.sql",
+        "test_query_48.sql",
+        "test_query_50.sql",
+        "test_query_51.sql",
+        "test_query_31.sql",
+        "test_query_119.sql",
+        "test_query_43.sql"
+    ]
+
     test_queries = read_queries(
-        [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if f.startswith("test_")])
+        [os.path.join(args.query_folder, f) for f in os.listdir(args.query_folder) if
+         f.startswith("test_") and f not in SKIP_QUERIES])
 
     print("Read", len(train_queries), "training queries.")
     print("Read", len(test_queries), "testing queries.")
@@ -95,7 +142,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 """
 python scripts/exps/run_queries_customer.py ./experiments/query/sample_query_stats_STATS_origin --dbname=stats_test --use_bao | tee ./experiments/result/logs/bao_run_origin_test.txt

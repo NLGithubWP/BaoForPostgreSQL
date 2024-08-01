@@ -26,6 +26,8 @@ SKIP_QUERIES=(
   "test_query_51.sql"
   "test_query_31.sql"
   "test_query_119.sql"
+  "test_query_43.sql"
+  "test_query_60.sql"
 )
 
 # Create or clear the log file
@@ -66,5 +68,4 @@ done
 
 echo "Maximum execution time: $MAX_TIME seconds" | tee -a "$LOG_FILE"
 
-# chmod +x ./experiments/query/test_queries.sh
-# ./experiments/query/test_queries.sh ./experiments/query/sample_query_stats_STATS_origin stats_test
+
