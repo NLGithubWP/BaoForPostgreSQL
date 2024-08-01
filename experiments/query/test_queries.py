@@ -43,8 +43,6 @@ def execute_sql_file(sql_file):
 
     print(f"Executing query from file: {sql_file}")
 
-    print(f"Executing query from file: {sql_file}\n")
-
     try:
         conn = psycopg2.connect(PG_CONNECTION_STR)
         cur = conn.cursor()
@@ -72,7 +70,6 @@ for sql_file in glob.glob(os.path.join(QUERY_FOLDER, '*.sql')):
 
     if base_name.startswith('train_') or base_name in SKIP_QUERIES:
         print(f"Skipping {base_name}")
-
         continue
 
     execute_sql_file(sql_file)
