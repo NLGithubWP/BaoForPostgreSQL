@@ -125,10 +125,8 @@ def main():
     # Pre-train with training queries
     print("---- Executing training queries for initial training ---- ")
     for fp, q in train_queries[:25]:
-        print(f"[debug] just begin one")
         pg_time = run_query(fp, q, PG_CONNECTION_STR, bao_reward=True)
         print("x", "x", time(), fp, pg_time, "PG", flush=True)
-        print(f"[debug] just end one", flush=True)
 
     # Determine chunk size for testing queries
     chunk_size = 25 if len(test_queries) >= 25 else len(test_queries)
