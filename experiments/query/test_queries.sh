@@ -14,6 +14,19 @@ DB_NAME="$2"
 LOG_FILE="./execution_log.txt"
 MAX_TIME=0
 
+# List of test queries to skip
+SKIP_QUERIES=(
+  "test_query_133.sql"
+  "test_query_112.sql"
+  "test_query_103.sql"
+  "test_query_105.sql"
+  "test_query_104.sql"
+  "test_query_48.sql"
+  "test_query_50.sql"
+  "test_query_51.sql"
+  "test_query_31.sql"
+)
+
 # Create or clear the log file
 : > "$LOG_FILE"
 
@@ -38,10 +51,19 @@ execute_sql_file() {
 
 # Iterate over all SQL files in the folder and execute them
 for sql_file in "$QUERY_FOLDER"/*.sql; do
+  # Get the base name of the file
+  base_name=$(basename "$sql_file")
+
+  # Skip files that begin with train_ or are in the SKIP_QUERIES list
+  if [[ $base_name == train_* ]] || [[ " ${SKIP_QUERIES[@]} " =~ " $base_name " ]]; then
+    echo "Skipping $base_name" | tee -a "$LOG_FILE"
+    continue
+  fi
+
   execute_sql_file "$sql_file"
 done
 
 echo "Maximum execution time: $MAX_TIME seconds" | tee -a "$LOG_FILE"
 
-
-# ./execute_sql_files.sh ./experiments/query/sample_query_stats_STATS_origin stats_test
+# chmod +x ./experiments/query/test_queries.sh
+# ./experiments/query/test_queries.sh ./experiments/query/sample_query_stats_STATS_origin stats_test
