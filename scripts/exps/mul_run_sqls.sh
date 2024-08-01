@@ -2,20 +2,22 @@
 
 # Function to execute SQL files
 execute_sql_files() {
+    local folder="$1"
+    shift
     local sql_files=("$@")
     for sql_file in "${sql_files[@]}"; do
-        psql -U postgres -d "$DB_NAME" -f "$sql_file"
+        psql -U postgres -d "$DB_NAME" -f "$folder/$sql_file"
     done
 }
 
 # Check if the correct number of arguments is provided
 if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <test_sql_folder> <database_name>"
+    echo "Usage: $0 <sql_folder> <database_name>"
     exit 1
 fi
 
 # Get the command-line arguments
-test_sql_folder="$1"
+sql_folder="$1"
 DB_NAME="$2"
 
 # Connect to the database
@@ -59,7 +61,7 @@ train_sql_files=(
 
 # Execute training SQL files
 echo "Executing training SQL files..."
-execute_sql_files "${train_sql_files[@]}"
+execute_sql_files "$sql_folder" "${train_sql_files[@]}"
 
 # Wait for user input
 echo "Please retrain the model and press Enter to continue..."
@@ -78,7 +80,7 @@ psql -U postgres -c "\timing"
 # Execute test SQL files
 echo "Executing test SQL files..."
 count=0
-test_sql_files=($(find "$test_sql_folder" -name "test_*.sql"))
+test_sql_files=($(find "$sql_folder" -name "test_*.sql"))
 
 for sql_file in "${test_sql_files[@]}"; do
     result=$(psql -U postgres -d "$DB_NAME" -f "$sql_file" 2>&1 | grep "Time:")
