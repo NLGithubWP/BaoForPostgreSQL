@@ -1,0 +1,29 @@
+badges,0,79851|comments,1,174305|posthistory,2,303187|postlinks,3,11102|posts,4,91976|tags,5,1032|users,6,40325|votes,7,328064
+badges,0,badges,79851|comments,1,comments,174305|posthistory,2,posthistory,303187|postlinks,3,postlinks,11102|posts,4,posts,91976|tags,5,tags,1032|users,6,users,40325|votes,7,votes,328064
+
+badges attr nos: id,0|userid,1|date,2
+comments attr nos: id,0|postid,1|score,2|creationdate,3|userid,4
+posthistory attr nos: id,0|posthistorytypeid,1|postid,2|creationdate,3|userid,4
+postlinks attr nos: id,0|creationdate,1|postid,2|relatedpostid,3|linktypeid,4
+posts attr nos: id,0|posttypeid,1|creationdate,2|score,3|viewcount,4|owneruserid,5|answercount,6|commentcount,7|favoritecount,8|lasteditoruserid,9
+tags attr nos: id,0|count,1|excerptpostid,2
+users attr nos: id,0|reputation,1|creationdate,2|views,3|upvotes,4|downvotes,5
+votes attr nos: id,0|postid,1|votetypeid,2|creationdate,3|userid,4|bountyamount,5
+
+badges attr types: 0,0,0
+comments attr types: 0,0,0,0,0
+posthistory attr types: 0,0,0,0,0
+postlinks attr types: 0,0,0,0,0
+posts attr types: 0,0,0,0,0,0,0,0,0,0
+tags attr types: 0,0,0
+users attr types: 0,0,0,0,0,0
+votes attr types: 0,0,0,0,0,0
+
+badges attr ranges: 0.5,92240.5,1.5,55746.5,1279539546.5,1410633088.5
+comments attr ranges: 0.5,221292.5,0.5,115376.5,-0.5,90.5,1233557118.5,1410631467.5,-1.5,55746.5
+posthistory attr ranges: 0.5,386848.5,0.5,38.5,0.5,115378.5,1233555671.5,1410634453.5,-2.5,55746.5
+postlinks attr ranges: 107.5,3356789.5,1279694852.5,1410612871.5,3.5,115360.5,0.5,115163.5,0.5,3.5
+posts attr ranges: 0.5,115378.5,0.5,7.5,1233555671.5,1410631763.5,-18.5,192.5,-1.5,175495.5,-2.5,55746.5,-1.5,136.5,-0.5,45.5,-1.5,233.5,-2.5,55733.5
+tags attr ranges: 0.5,1869.5,0.5,7244.5,-1.5,114058.5
+users attr ranges: -0.5,55747.5,0.5,87393.5,1279493725.5,1410627704.5,-0.5,20932.5,-0.5,11442.5,-0.5,1920.5
+votes attr ranges: 0.5,386258.5,0.5,115376.5,0.5,16.5,1233503999.5,1410624000.5,-2.5,55706.5,-1.5,500.5
