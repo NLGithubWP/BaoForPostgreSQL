@@ -1,76 +1,80 @@
 #!/bin/bash
 
-# Check for the correct number of arguments
+# Check if the correct number of arguments is provided
 if [ "$#" -ne 2 ]; then
-  echo "Usage: $0 QUERY_FOLDER DB_NAME"
-  exit 1
+    echo "Usage: $0 <sql_folder> <database_name>"
+    exit 1
 fi
 
-# Configuration
-DB_HOST="localhost"
-DB_USER="postgres"
-QUERY_FOLDER="$1"
+# Get the command-line arguments
+sql_folder="$1"
 DB_NAME="$2"
-LOG_FILE="./execution_log.txt"
-MAX_TIME=0
 
-# List of test queries to skip
-SKIP_QUERIES=(
-  "test_query_133.sql"
-  "test_query_112.sql"
-  "test_query_103.sql"
-  "test_query_105.sql"
-  "test_query_104.sql"
-  "test_query_48.sql"
-  "test_query_50.sql"
-  "test_query_51.sql"
-  "test_query_31.sql"
-  "test_query_119.sql"
-  "test_query_43.sql"
-  "test_query_60.sql"
-      # this is slow
-  "test_query_60.sql"
-  "test_query_54.sql"
-  "test_query_53.sql"
-  "test_query_69.sql"
-)
+# Create a psql script file
+psql_script='run_queries.sql'
 
-# Create or clear the log file
-: > "$LOG_FILE"
+# Start writing to the psql script file
+cat <<EOL > $psql_script
+-- Set initial configurations
+SET enable_bao TO true;
+SET enable_bao_selection TO false;
+SET enable_bao_rewards TO true;
+SET bao_num_arms TO 5;
+SET statement_timeout TO 500000;
 
-# Function to execute a single SQL file and record the time taken
-execute_sql_file() {
-  local sql_file=$1
-  local start_time=$(date +%s.%N)
+-- Execute training SQL files
+\i :sql_folder/train_query_1.sql
+\i :sql_folder/train_query_3.sql
+\i :sql_folder/train_query_4.sql
+\i :sql_folder/train_query_5.sql
+\i :sql_folder/train_query_7.sql
+\i :sql_folder/train_query_35.sql
+\i :sql_folder/train_query_67.sql
+\i :sql_folder/train_query_41.sql
+\i :sql_folder/train_query_61.sql
+\i :sql_folder/train_query_66.sql
+\i :sql_folder/train_query_74.sql
+\i :sql_folder/train_query_82.sql
+\i :sql_folder/train_query_99.sql
+\i :sql_folder/train_query_98.sql
+\i :sql_folder/train_query_96.sql
+\i :sql_folder/train_query_95.sql
+\i :sql_folder/train_query_94.sql
+\i :sql_folder/train_query_93.sql
+\i :sql_folder/train_query_92.sql
+\i :sql_folder/train_query_91.sql
+\i :sql_folder/train_query_90.sql
+\i :sql_folder/train_query_89.sql
+\i :sql_folder/train_query_88.sql
 
-  echo "Executing query from file: $sql_file" | tee -a "$LOG_FILE"
-  psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -f "$sql_file"
+-- Prompt user to retrain the model and wait for input
+\echo 'Please retrain the model and press Enter to continue...'
+\! read -r
 
-  local end_time=$(date +%s.%N)
-  local execution_time=$(echo "$end_time - $start_time" | bc)
+-- Set configurations for testing
+SET enable_bao TO true;
+SET enable_bao_selection TO true;
+SET enable_bao_rewards TO true;
+SET bao_num_arms TO 5;
+SET statement_timeout TO 500000;
 
-  echo "Execution time for $sql_file: $execution_time seconds" | tee -a "$LOG_FILE"
+-- Enable timing
+\timing
 
-  # Update max execution time if current execution time is greater
-  if (( $(echo "$execution_time > $MAX_TIME" | bc -l) )); then
-    MAX_TIME=$execution_time
-  fi
-}
+-- Execute test SQL files
+\echo 'Executing test SQL files...'
+EOL
 
-# Iterate over all SQL files in the folder and execute them
-for sql_file in "$QUERY_FOLDER"/*.sql; do
-  # Get the base name of the file
-  base_name=$(basename "$sql_file")
-
-  # Skip files that begin with train_ or are in the SKIP_QUERIES list
-  if [[ $base_name == train_* ]] || [[ " ${SKIP_QUERIES[@]} " =~ " $base_name " ]]; then
-    echo "Skipping $base_name" | tee -a "$LOG_FILE"
-    continue
-  fi
-
-  execute_sql_file "$sql_file"
+# Loop to add test queries
+for i in $(seq 1 146); do
+    echo "\\i :sql_folder/test_query_${i}.sql" >> $psql_script
 done
 
-echo "Maximum execution time: $MAX_TIME seconds" | tee -a "$LOG_FILE"
+# Finish the psql script
+echo "\\echo 'All SQL files executed.'" >> $psql_script
 
+# Execute the generated psql script
+psql -U postgres -d "$DB_NAME" -v sql_folder="$sql_folder" -f $psql_script
 
+# Remove the psql script file
+rm -f $psql_script

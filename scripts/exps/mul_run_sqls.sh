@@ -85,6 +85,7 @@ test_sql_files=($(find "$sql_folder" -name "test_*.sql"))
 for sql_file in "${test_sql_files[@]}"; do
     echo "Executing test query: $sql_file"
     result=$(psql -U postgres -d "$DB_NAME" -f "$sql_file" 2>&1 | grep "Time:")
+    echo result
     if [[ $result =~ Time:\ ([0-9]+\.[0-9]+)\ ms ]]; then
         time_ms="${BASH_REMATCH[1]}"
         time_sec=$(echo "scale=6; $time_ms / 1000" | bc)
