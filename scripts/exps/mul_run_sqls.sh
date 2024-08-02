@@ -67,6 +67,7 @@ EOL
 
 # Loop to add test queries
 for i in $(seq 1 146); do
+    echo "\\echo 'Executing test_query_${i}.sql'" >> $psql_script
     echo "\\i :sql_folder/test_query_${i}.sql" >> $psql_script
     if (( i % 25 == 0 )); then
         cat <<EOL >> $psql_script
