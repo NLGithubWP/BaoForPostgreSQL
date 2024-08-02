@@ -6,6 +6,7 @@ execute_sql_files() {
     shift
     local sql_files=("$@")
     for sql_file in "${sql_files[@]}"; do
+        echo "Executing query: $sql_file"
         psql -U postgres -d "$DB_NAME" -f "$folder/$sql_file"
     done
 }
