@@ -33,7 +33,6 @@ psql -U postgres -c "SET statement_timeout TO 500000;"
 # List of training SQL files
 train_sql_files=(
     "train_query_1.sql"
-    "train_query_2.sql"
     "train_query_3.sql"
     "train_query_4.sql"
     "train_query_5.sql"
