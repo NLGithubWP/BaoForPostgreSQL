@@ -44,7 +44,7 @@ train_sql_files=(
     "train_query_61.sql"
     "train_query_66.sql"
     "train_query_74.sql"
-    "train_query_76.sql"
+#    "train_query_76.sql"
     "train_query_82.sql"
     "train_query_99.sql"
     "train_query_98.sql"
@@ -83,6 +83,7 @@ count=0
 test_sql_files=($(find "$sql_folder" -name "test_*.sql"))
 
 for sql_file in "${test_sql_files[@]}"; do
+    echo "Executing test query: $sql_file"
     result=$(psql -U postgres -d "$DB_NAME" -f "$sql_file" 2>&1 | grep "Time:")
     if [[ $result =~ Time:\ ([0-9]+\.[0-9]+)\ ms ]]; then
         time_ms="${BASH_REMATCH[1]}"
