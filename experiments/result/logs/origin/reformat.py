@@ -1,44 +1,41 @@
 import re
 
-# Path to the log file
-log_path = 'pg_run_from_script.txt'
 
-# Load the log file
-with open(log_path, 'r') as file:
-    log_data = file.read()
+# Function to extract query and time
+def extract_query_time(file_path):
+    results = []
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+        current_query = None
+        for line in lines:
+            line = line.strip()
+            if line.startswith("Executing test_query_"):
+                current_query = line
+            elif "Time:" in line and current_query:
+                match = re.search(r"Time: ([\d\.]+) ms", line)
+                if match:
+                    time_ms = float(match.group(1))
+                    time_sec = time_ms / 1000
+                    results.append((current_query, time_sec))
+                current_query = None
+    return results
 
-# Pattern to capture query ID and execution time
-pattern = r"test_query_(\d+)\.sql.*?(\d*\.?\d*) seconds"
 
-# Find all matches with the pattern
-matches = re.findall(pattern, log_data)
+# Function to print the results
+def save_results(results, output_file):
+    with open(output_file, 'w') as file:
+        for query, time_sec in results:
+            file.write(f"{query}: {time_sec}\n")
 
-# Convert matches to dictionary with integer query ID and float execution time
-query_data = {int(query_id): float(exec_time) if exec_time else '' for query_id, exec_time in matches}
 
-# Determine the range of query IDs
-min_id = min(query_data.keys())
-max_id = max(query_data.keys())
+# Main function
+def main():
+    input_file_path = 'pg_run.txt'
+    output_file_path = 'query_execution_times.txt'
+    results = extract_query_time(input_file_path)
+    save_results(results, output_file_path)
+    print(f"Results saved to {output_file_path}")
 
-# Fill in missing query IDs
-all_query_data = [(query_id, query_data.get(query_id, '')) for query_id in range(min_id, max_id + 1)]
 
-# Sort by query ID (already in order due to range)
-sorted_by_id = all_query_data
-
-# Sort by execution time, skipping empty entries for sorting purposes
-sorted_by_latency = sorted((item for item in all_query_data if item[1] != ''), key=lambda x: x[1])
-
-# File paths for output
-id_path = 'queries_sorted_by_id.txt'
-latency_path = 'queries_sorted_by_latency.txt'
-
-# Writing the sorted data by query ID
-with open(id_path, 'w') as f:
-    for query_id, exec_time in sorted_by_id:
-        f.write(f"{query_id} {exec_time}\n")
-
-# Writing the sorted data by latency
-with open(latency_path, 'w') as f:
-    for query_id, exec_time in sorted_by_latency:
-        f.write(f"{query_id} {exec_time}\n")
+if __name__ == "__main__":
+    main()
