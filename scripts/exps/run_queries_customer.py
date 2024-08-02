@@ -67,7 +67,6 @@ def main():
         [os.path.join(args.query_folder, f) for f in
          [
              "train_query_1.sql",
-             "train_query_2.sql",
              "train_query_3.sql",
              "train_query_4.sql",
              "train_query_5.sql",
