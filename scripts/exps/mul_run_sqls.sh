@@ -47,9 +47,9 @@ SET statement_timeout TO 500000;
 \i :sql_folder/train_query_89.sql
 \i :sql_folder/train_query_88.sql
 
--- Prompt user to retrain the model and wait for input
-\echo 'Please retrain the model and press Enter to continue...'
-\! read -r
+-- Pause for 30 seconds
+\echo 'Pausing for 30 seconds...'
+\! sleep 30
 
 -- Set configurations for testing
 SET enable_bao TO true;
@@ -72,9 +72,9 @@ for i in $(seq 1 146); do
     if (( i % 25 == 0 )); then
         cat <<EOL >> $psql_script
 
--- Prompt user to retrain the model and wait for input
-\echo 'Please retrain the model and press Enter to continue...'
-\! read -r
+-- Pause for 30 seconds
+\echo 'Pausing for 30 seconds...'
+\! sleep 30
 
 EOL
     fi
