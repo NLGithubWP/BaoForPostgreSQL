@@ -1,0 +1,1022 @@
+Executing test_query_1.sql
+  count  
+---------
+ 2809424
+(1 row)
+
+Time: 911.383 ms
+Executing test_query_2.sql
+  count  
+---------
+ 1116000
+(1 row)
+
+Time: 277.145 ms
+Executing test_query_3.sql
+  count  
+---------
+ 2515046
+(1 row)
+
+Time: 364.777 ms
+Executing test_query_4.sql
+  count  
+---------
+ 2870375
+(1 row)
+
+Time: 735.032 ms
+Executing test_query_5.sql
+  count  
+---------
+ 2630146
+(1 row)
+
+Time: 383.581 ms
+Executing test_query_6.sql
+ count 
+-------
+ 96484
+(1 row)
+
+Time: 440.248 ms
+Executing test_query_7.sql
+ count  
+--------
+ 698213
+(1 row)
+
+Time: 321.477 ms
+Executing test_query_8.sql
+ count  
+--------
+ 144017
+(1 row)
+
+Time: 248.609 ms
+Executing test_query_9.sql
+  count  
+---------
+ 1639421
+(1 row)
+
+Time: 285.050 ms
+Executing test_query_10.sql
+ count  
+--------
+ 454094
+(1 row)
+
+Time: 257.203 ms
+Executing test_query_11.sql
+   count    
+------------
+ 3136348028
+(1 row)
+
+Time: 48689.955 ms (00:48.690)
+Executing test_query_12.sql
+ count  
+--------
+ 554302
+(1 row)
+
+Time: 245.583 ms
+Executing test_query_13.sql
+  count   
+----------
+ 43927632
+(1 row)
+
+Time: 4935.903 ms (00:04.936)
+Executing test_query_14.sql
+ count 
+-------
+  4582
+(1 row)
+
+Time: 105.013 ms
+Executing test_query_15.sql
+   count   
+-----------
+ 107676740
+(1 row)
+
+Time: 3694.140 ms (00:03.694)
+Executing test_query_16.sql
+  count  
+---------
+ 1957551
+(1 row)
+
+Time: 339.253 ms
+Executing test_query_17.sql
+   count   
+-----------
+ 154355934
+(1 row)
+
+Time: 4236.927 ms (00:04.237)
+Executing test_query_18.sql
+ count  
+--------
+ 155561
+(1 row)
+
+Time: 180.771 ms
+Executing test_query_19.sql
+   count   
+-----------
+ 155696936
+(1 row)
+
+Time: 4863.314 ms (00:04.863)
+Executing test_query_20.sql
+  count  
+---------
+ 4230153
+(1 row)
+
+Time: 462.571 ms
+Executing test_query_21.sql
+  count   
+----------
+ 18382871
+(1 row)
+
+Time: 2990.421 ms (00:02.990)
+Executing test_query_22.sql
+  count  
+---------
+ 1839326
+(1 row)
+
+Time: 379.097 ms
+Executing test_query_23.sql
+  count   
+----------
+ 19424781
+(1 row)
+
+Time: 839.499 ms
+Executing test_query_24.sql
+ count 
+-------
+  1717
+(1 row)
+
+Time: 94.003 ms
+Executing test_query_25.sql
+ count  
+--------
+ 569476
+(1 row)
+
+Time: 7241.076 ms (00:07.241)
+Pausing for 30 seconds...
+Executing test_query_26.sql
+   count   
+-----------
+ 299574955
+(1 row)
+
+Time: 9052.305 ms (00:09.052)
+Executing test_query_27.sql
+   count   
+-----------
+ 593169291
+(1 row)
+
+Time: 17056.953 ms (00:17.057)
+Executing test_query_28.sql
+  count  
+---------
+ 2863626
+(1 row)
+
+Time: 716.103 ms
+Executing test_query_29.sql
+ count  
+--------
+ 490921
+(1 row)
+
+Time: 291.497 ms
+Executing test_query_30.sql
+  count  
+---------
+ 1571167
+(1 row)
+
+Time: 382.417 ms
+Executing test_query_31.sql
+  count   
+----------
+ 11075893
+(1 row)
+
+Time: 22005.259 ms (00:22.005)
+Executing test_query_32.sql
+ count 
+-------
+ 79851
+(1 row)
+
+Time: 76.229 ms
+Executing test_query_33.sql
+ count  
+--------
+ 176213
+(1 row)
+
+Time: 175.481 ms
+Executing test_query_34.sql
+  count  
+---------
+ 1936953
+(1 row)
+
+Time: 703.542 ms
+Executing test_query_35.sql
+  count  
+---------
+ 2034610
+(1 row)
+
+Time: 457.720 ms
+Executing test_query_36.sql
+   count   
+-----------
+ 105742741
+(1 row)
+
+Time: 2728.296 ms (00:02.728)
+Executing test_query_37.sql
+ count  
+--------
+ 209182
+(1 row)
+
+Time: 220.551 ms
+Executing test_query_38.sql
+  count  
+---------
+ 2016238
+(1 row)
+
+Time: 467.091 ms
+Executing test_query_39.sql
+  count  
+---------
+ 1771584
+(1 row)
+
+Time: 449.644 ms
+Executing test_query_40.sql
+ count  
+--------
+ 596487
+(1 row)
+
+Time: 178.205 ms
+Executing test_query_41.sql
+ count  
+--------
+ 354388
+(1 row)
+
+Time: 233.072 ms
+Executing test_query_42.sql
+ count 
+-------
+ 33955
+(1 row)
+
+Time: 257.740 ms
+Executing test_query_43.sql
+  count  
+---------
+ 3778084
+(1 row)
+
+Time: 362.857 ms
+Executing test_query_44.sql
+psql:/code/AI4QueryOptimizer/baseline/BaoForPostgreSQL/experiments/query/sample_query_stats_STATS_origin/test_query_44.sql:1: ERROR:  could not write to file "base/pgsql_tmp/pgsql_tmp6842.56.sharedfileset/o6of8.p1.7": No space left on device
+CONTEXT:  parallel worker
+Time: 108637.623 ms (01:48.638)
+Executing test_query_45.sql
+  count  
+---------
+ 4232319
+(1 row)
+
+Time: 827.037 ms
+Executing test_query_46.sql
+ count 
+-------
+ 35205
+(1 row)
+
+Time: 286.868 ms
+Executing test_query_47.sql
+ count 
+-------
+ 63500
+(1 row)
+
+Time: 125.981 ms
+Executing test_query_48.sql
+ count  
+--------
+ 454094
+(1 row)
+
+Time: 260.893 ms
+Executing test_query_49.sql
+ count 
+-------
+  6299
+(1 row)
+
+Time: 99.704 ms
+Executing test_query_50.sql
+ count  
+--------
+ 868742
+(1 row)
+
+Time: 294.081 ms
+Pausing for 30 seconds...
+Executing test_query_51.sql
+ count 
+-------
+  9812
+(1 row)
+
+Time: 1354.331 ms (00:01.354)
+Executing test_query_52.sql
+  count   
+----------
+ 19402569
+(1 row)
+
+Time: 31676.669 ms (00:31.677)
+Executing test_query_53.sql
+   count    
+------------
+ 5906203584
+(1 row)
+
+Time: 132687.692 ms (02:12.688)
+Executing test_query_54.sql
+   count    
+------------
+ 2263957167
+(1 row)
+
+Time: 261221.451 ms (04:21.221)
+Executing test_query_55.sql
+ count 
+-------
+  3636
+(1 row)
+
+Time: 194.947 ms
+Executing test_query_56.sql
+  count   
+----------
+ 13971410
+(1 row)
+
+Time: 920.192 ms
+Executing test_query_57.sql
+   count   
+-----------
+ 102890467
+(1 row)
+
+Time: 8358.864 ms (00:08.359)
+Executing test_query_58.sql
+  count   
+----------
+ 56401480
+(1 row)
+
+Time: 1766.118 ms (00:01.766)
+Executing test_query_59.sql
+ count  
+--------
+ 780683
+(1 row)
+
+Time: 232.518 ms
+Executing test_query_60.sql
+ count  
+--------
+ 986987
+(1 row)
+
+Time: 402.748 ms
+Executing test_query_61.sql
+  count  
+---------
+ 1633681
+(1 row)
+
+Time: 323.107 ms
+Executing test_query_62.sql
+ count  
+--------
+ 914532
+(1 row)
+
+Time: 357.720 ms
+Executing test_query_63.sql
+ count  
+--------
+ 410411
+(1 row)
+
+Time: 289.464 ms
+Executing test_query_64.sql
+ count 
+-------
+  6272
+(1 row)
+
+Time: 130.971 ms
+Executing test_query_65.sql
+   count   
+-----------
+ 228748307
+(1 row)
+
+Time: 6308.167 ms (00:06.308)
+Executing test_query_66.sql
+ count  
+--------
+ 394492
+(1 row)
+
+Time: 7974.176 ms (00:07.974)
+Executing test_query_67.sql
+   count   
+-----------
+ 312148706
+(1 row)
+
+Time: 9388.574 ms (00:09.389)
+Executing test_query_68.sql
+  count   
+----------
+ 15677331
+(1 row)
+
+Time: 1459.966 ms (00:01.460)
+Executing test_query_69.sql
+    count    
+-------------
+ 17849233970
+(1 row)
+
+Time: 384069.902 ms (06:24.070)
+Executing test_query_70.sql
+ count  
+--------
+ 950577
+(1 row)
+
+Time: 427.895 ms
+Executing test_query_71.sql
+ count  
+--------
+ 315516
+(1 row)
+
+Time: 200.855 ms
+Executing test_query_72.sql
+  count   
+----------
+ 80052528
+(1 row)
+
+Time: 6643.644 ms (00:06.644)
+Executing test_query_73.sql
+
+
+
+psql:/code/AI4QueryOptimizer/baseline/BaoForPostgreSQL/experiments/query/sample_query_stats_STATS_origin/test_query_73.sql:1: ERROR:  canceling statement due to statement timeout
+Time: 500018.841 ms (08:20.019)
+Executing test_query_74.sql
+  count   
+----------
+ 10862842
+(1 row)
+
+Time: 640.733 ms
+Executing test_query_75.sql
+ count  
+--------
+ 434967
+(1 row)
+
+Time: 375.390 ms
+Pausing for 30 seconds...
+Executing test_query_76.sql
+  count   
+----------
+ 38686327
+(1 row)
+
+Time: 2125.548 ms (00:02.126)
+Executing test_query_77.sql
+ count  
+--------
+ 436286
+(1 row)
+
+Time: 332.920 ms
+Executing test_query_78.sql
+ count 
+-------
+   469
+(1 row)
+
+Time: 95.034 ms
+Executing test_query_79.sql
+  count  
+---------
+ 7491903
+(1 row)
+
+Time: 617.388 ms
+Executing test_query_80.sql
+ count  
+--------
+ 897718
+(1 row)
+
+Time: 345.806 ms
+Executing test_query_81.sql
+ count  
+--------
+ 978405
+(1 row)
+
+Time: 311.447 ms
+Executing test_query_82.sql
+   count   
+-----------
+ 113925678
+(1 row)
+
+Time: 8457.514 ms (00:08.458)
+Executing test_query_83.sql
+  count   
+----------
+ 88962973
+(1 row)
+
+Time: 8555.905 ms (00:08.556)
+Executing test_query_84.sql
+ count 
+-------
+ 10895
+(1 row)
+
+Time: 102.103 ms
+Executing test_query_85.sql
+ count 
+-------
+  4801
+(1 row)
+
+Time: 74.013 ms
+Executing test_query_86.sql
+ count 
+-------
+ 25033
+(1 row)
+
+Time: 141.019 ms
+Executing test_query_87.sql
+  count   
+----------
+ 10223864
+(1 row)
+
+Time: 466.128 ms
+Executing test_query_88.sql
+ count  
+--------
+ 913441
+(1 row)
+
+Time: 301.062 ms
+Executing test_query_89.sql
+  count   
+----------
+ 16049150
+(1 row)
+
+Time: 837.108 ms
+Executing test_query_90.sql
+  count  
+---------
+ 2162683
+(1 row)
+
+Time: 276.179 ms
+Executing test_query_91.sql
+ count 
+-------
+  5091
+(1 row)
+
+Time: 221.777 ms
+Executing test_query_92.sql
+  count  
+---------
+ 1104151
+(1 row)
+
+Time: 305.609 ms
+Executing test_query_93.sql
+   count   
+-----------
+ 593169291
+(1 row)
+
+Time: 16181.930 ms (00:16.182)
+Executing test_query_94.sql
+   count   
+-----------
+ 255355807
+(1 row)
+
+Time: 21526.748 ms (00:21.527)
+Executing test_query_95.sql
+  count   
+----------
+ 10223864
+(1 row)
+
+Time: 461.504 ms
+Executing test_query_96.sql
+  count  
+---------
+ 1018612
+(1 row)
+
+Time: 398.861 ms
+Executing test_query_97.sql
+  count   
+----------
+ 58623592
+(1 row)
+
+Time: 2879.449 ms (00:02.879)
+Executing test_query_98.sql
+ count  
+--------
+ 329207
+(1 row)
+
+Time: 191.840 ms
+Executing test_query_99.sql
+  count  
+---------
+ 1458075
+(1 row)
+
+Time: 225.468 ms
+Executing test_query_100.sql
+ count  
+--------
+ 245567
+(1 row)
+
+Time: 168.066 ms
+Pausing for 30 seconds...
+Executing test_query_101.sql
+  count  
+---------
+ 3812589
+(1 row)
+
+Time: 484.189 ms
+Executing test_query_102.sql
+   count    
+------------
+ 1112747282
+(1 row)
+
+Time: 26388.460 ms (00:26.388)
+Executing test_query_103.sql
+ count 
+-------
+ 56205
+(1 row)
+
+Time: 299.671 ms
+Executing test_query_104.sql
+ count  
+--------
+ 481420
+(1 row)
+
+Time: 233.649 ms
+Executing test_query_105.sql
+ count  
+--------
+ 304974
+(1 row)
+
+Time: 238.596 ms
+Executing test_query_106.sql
+  count   
+----------
+ 15887370
+(1 row)
+
+Time: 643.062 ms
+Executing test_query_107.sql
+  count  
+---------
+ 4254157
+(1 row)
+
+Time: 500.138 ms
+Executing test_query_108.sql
+  count  
+---------
+ 1359217
+(1 row)
+
+Time: 335.848 ms
+Executing test_query_109.sql
+  count  
+---------
+ 7661811
+(1 row)
+
+Time: 1392.369 ms (00:01.392)
+Executing test_query_110.sql
+  count   
+----------
+ 10220614
+(1 row)
+
+Time: 581.027 ms
+Executing test_query_111.sql
+ count  
+--------
+ 251068
+(1 row)
+
+Time: 269.427 ms
+Executing test_query_112.sql
+  count  
+---------
+ 1501690
+(1 row)
+
+Time: 450.815 ms
+Executing test_query_113.sql
+  count   
+----------
+ 10993951
+(1 row)
+
+Time: 654.989 ms
+Executing test_query_114.sql
+  count   
+----------
+ 40855663
+(1 row)
+
+Time: 1063.594 ms (00:01.064)
+Executing test_query_115.sql
+ count 
+-------
+ 28572
+(1 row)
+
+Time: 121.822 ms
+Executing test_query_116.sql
+ count  
+--------
+ 699302
+(1 row)
+
+Time: 232.116 ms
+Executing test_query_117.sql
+   count   
+-----------
+ 232064316
+(1 row)
+
+Time: 6372.978 ms (00:06.373)
+Executing test_query_118.sql
+  count  
+---------
+ 6351775
+(1 row)
+
+Time: 1835.195 ms (00:01.835)
+Executing test_query_119.sql
+
+
+
+psql:/code/AI4QueryOptimizer/baseline/BaoForPostgreSQL/experiments/query/sample_query_stats_STATS_origin/test_query_119.sql:1: ERROR:  canceling statement due to statement timeout
+Time: 500019.698 ms (08:20.020)
+Executing test_query_120.sql
+  count   
+----------
+ 36226091
+(1 row)
+
+Time: 1650.143 ms (00:01.650)
+Executing test_query_121.sql
+ count  
+--------
+ 428612
+(1 row)
+
+Time: 273.156 ms
+Executing test_query_122.sql
+  count   
+----------
+ 57640723
+(1 row)
+
+Time: 4039.673 ms (00:04.040)
+Executing test_query_123.sql
+   count   
+-----------
+ 537352263
+(1 row)
+
+Time: 21397.967 ms (00:21.398)
+Executing test_query_124.sql
+   count   
+-----------
+ 183537163
+(1 row)
+
+Time: 15908.043 ms (00:15.908)
+Executing test_query_125.sql
+ count  
+--------
+ 758411
+(1 row)
+
+Time: 359.516 ms
+Pausing for 30 seconds...
+Executing test_query_126.sql
+  count   
+----------
+ 18762969
+(1 row)
+
+Time: 1416.785 ms (00:01.417)
+Executing test_query_127.sql
+  count   
+----------
+ 18258741
+(1 row)
+
+Time: 915.247 ms
+Executing test_query_128.sql
+  count  
+---------
+ 1582060
+(1 row)
+
+Time: 390.230 ms
+Executing test_query_129.sql
+  count  
+---------
+ 5982882
+(1 row)
+
+Time: 1114.087 ms (00:01.114)
+Executing test_query_130.sql
+  count   
+----------
+ 11947976
+(1 row)
+
+Time: 2389.930 ms (00:02.390)
+Executing test_query_131.sql
+ count  
+--------
+ 296172
+(1 row)
+
+Time: 196.505 ms
+Executing test_query_132.sql
+ count  
+--------
+ 109961
+(1 row)
+
+Time: 156.427 ms
+Executing test_query_133.sql
+ count 
+-------
+ 14413
+(1 row)
+
+Time: 86.118 ms
+Executing test_query_134.sql
+  count  
+---------
+ 6891116
+(1 row)
+
+Time: 736.753 ms
+Executing test_query_135.sql
+  count  
+---------
+ 1709781
+(1 row)
+
+Time: 240.942 ms
+Executing test_query_136.sql
+ count 
+-------
+ 16698
+(1 row)
+
+Time: 504.753 ms
+Executing test_query_137.sql
+ count 
+-------
+   224
+(1 row)
+
+Time: 14220.545 ms (00:14.221)
+Executing test_query_138.sql
+  count  
+---------
+ 2323452
+(1 row)
+
+Time: 453.707 ms
+Executing test_query_139.sql
+  count   
+----------
+ 86993469
+(1 row)
+
+Time: 12874.163 ms (00:12.874)
+Executing test_query_140.sql
+ count 
+-------
+ 26848
+(1 row)
+
+Time: 143.410 ms
+Executing test_query_141.sql
+  count  
+---------
+ 1100297
+(1 row)
+
+Time: 239.428 ms
+Executing test_query_142.sql
+  count  
+---------
+ 1490297
+(1 row)
+
+Time: 558.378 ms
+Executing test_query_143.sql
+  count  
+---------
+ 1459345
+(1 row)
+
+Time: 229.063 ms
+Executing test_query_144.sql
+  count  
+---------
+ 3169724
+(1 row)
+
+Time: 699.387 ms
+Executing test_query_145.sql
+  count  
+---------
+ 2488080
+(1 row)
+
+Time: 262.132 ms
+Executing test_query_146.sql
+ count 
+-------
+ 52313
+(1 row)
+
+Time: 191.461 ms

@@ -30,7 +30,7 @@ def save_results(results, output_file):
 
 # Main function
 def main():
-    input_file_path = 'pg_run.txt'
+    input_file_path = 'bao_run.txt'
     output_file_path = 'query_execution_times.txt'
     results = extract_query_time(input_file_path)
     save_results(results, output_file_path)
