@@ -28,7 +28,7 @@ SET enable_bao_rewards TO false;
 EOL
 
 # Loop to add test queries
-for i in $(seq 60 146); do
+for i in $(seq 61 146); do
     echo "\\echo 'Executing test_query_${i}.sql'" >> $psql_script
     echo "\\i :sql_folder/test_query_${i}.sql" >> $psql_script
 done
