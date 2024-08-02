@@ -1,0 +1,1156 @@
+SET
+SET
+SET
+SET
+SET
+ count 
+-------
+     0
+(1 row)
+
+  count  
+---------
+ 1213514
+(1 row)
+
+ count  
+--------
+ 251632
+(1 row)
+
+ count 
+-------
+  2305
+(1 row)
+
+ count 
+-------
+  5353
+(1 row)
+
+  count  
+---------
+ 1278407
+(1 row)
+
+ count 
+-------
+ 26660
+(1 row)
+
+  count   
+----------
+ 26253379
+(1 row)
+
+ count 
+-------
+ 33310
+(1 row)
+
+ count 
+-------
+  9207
+(1 row)
+
+ count  
+--------
+ 351702
+(1 row)
+
+ count 
+-------
+     0
+(1 row)
+
+ count 
+-------
+ 44048
+(1 row)
+
+  count  
+---------
+ 1647618
+(1 row)
+
+ count 
+-------
+   321
+(1 row)
+
+ count 
+-------
+ 11253
+(1 row)
+
+ count  
+--------
+ 636203
+(1 row)
+
+  count  
+---------
+ 2082304
+(1 row)
+
+ count 
+-------
+  4900
+(1 row)
+
+ count 
+-------
+     0
+(1 row)
+
+ count 
+-------
+     0
+(1 row)
+
+ count 
+-------
+  2531
+(1 row)
+
+ count 
+-------
+   400
+(1 row)
+
+Pausing for 30 seconds...
+SET
+SET
+SET
+SET
+SET
+Timing is on.
+Executing test SQL files...
+Executing test_query_1.sql
+ count 
+-------
+ 17666
+(1 row)
+
+Time: 56.666 ms
+Executing test_query_2.sql
+ count 
+-------
+ 13116
+(1 row)
+
+Time: 122.094 ms
+Executing test_query_3.sql
+ count 
+-------
+  2998
+(1 row)
+
+Time: 41.116 ms
+Executing test_query_4.sql
+ count 
+-------
+  5780
+(1 row)
+
+Time: 91.430 ms
+Executing test_query_5.sql
+ count 
+-------
+  8735
+(1 row)
+
+Time: 114.199 ms
+Executing test_query_6.sql
+ count 
+-------
+ 66178
+(1 row)
+
+Time: 186.212 ms
+Executing test_query_7.sql
+ count 
+-------
+ 32488
+(1 row)
+
+Time: 106.863 ms
+Executing test_query_8.sql
+ count 
+-------
+  9428
+(1 row)
+
+Time: 86.569 ms
+Executing test_query_9.sql
+ count 
+-------
+  2546
+(1 row)
+
+Time: 72.586 ms
+Executing test_query_10.sql
+ count 
+-------
+  1976
+(1 row)
+
+Time: 108.554 ms
+Executing test_query_11.sql
+  count   
+----------
+ 89933231
+(1 row)
+
+Time: 4926.909 ms (00:04.927)
+Executing test_query_12.sql
+ count 
+-------
+  4129
+(1 row)
+
+Time: 112.557 ms
+Executing test_query_13.sql
+  count   
+----------
+ 24678256
+(1 row)
+
+Time: 2232.919 ms (00:02.233)
+Executing test_query_14.sql
+ count 
+-------
+   199
+(1 row)
+
+Time: 67.950 ms
+Executing test_query_15.sql
+ count  
+--------
+ 143691
+(1 row)
+
+Time: 136.395 ms
+Executing test_query_16.sql
+ count 
+-------
+  6387
+(1 row)
+
+Time: 70.390 ms
+Executing test_query_17.sql
+ count  
+--------
+ 259165
+(1 row)
+
+Time: 107.092 ms
+Executing test_query_18.sql
+ count 
+-------
+  8328
+(1 row)
+
+Time: 105.327 ms
+Executing test_query_19.sql
+ count 
+-------
+ 31053
+(1 row)
+
+Time: 95.893 ms
+Executing test_query_20.sql
+ count  
+--------
+ 306790
+(1 row)
+
+Time: 196.590 ms
+Executing test_query_21.sql
+  count   
+----------
+ 24752180
+(1 row)
+
+Time: 1196.427 ms (00:01.196)
+Executing test_query_22.sql
+ count 
+-------
+  6932
+(1 row)
+
+Time: 76.097 ms
+Executing test_query_23.sql
+  count  
+---------
+ 7754948
+(1 row)
+
+Time: 428.569 ms
+Executing test_query_24.sql
+ count 
+-------
+     6
+(1 row)
+
+Time: 57.722 ms
+Executing test_query_25.sql
+  count  
+---------
+ 2983237
+(1 row)
+
+Time: 3990.540 ms (00:03.991)
+Pausing for 30 seconds...
+Executing test_query_26.sql
+ count 
+-------
+ 47285
+(1 row)
+
+Time: 77.676 ms
+Executing test_query_27.sql
+  count  
+---------
+ 2098391
+(1 row)
+
+Time: 291.040 ms
+Executing test_query_28.sql
+ count 
+-------
+  5421
+(1 row)
+
+Time: 157.418 ms
+Executing test_query_29.sql
+ count 
+-------
+  1229
+(1 row)
+
+Time: 51.533 ms
+Executing test_query_30.sql
+ count 
+-------
+  2617
+(1 row)
+
+Time: 97.792 ms
+Executing test_query_31.sql
+  count   
+----------
+ 26257974
+(1 row)
+
+Time: 2166.011 ms (00:02.166)
+Executing test_query_32.sql
+ count 
+-------
+  7866
+(1 row)
+
+Time: 70.827 ms
+Executing test_query_33.sql
+ count 
+-------
+  1997
+(1 row)
+
+Time: 73.669 ms
+Executing test_query_34.sql
+  count  
+---------
+ 1256434
+(1 row)
+
+Time: 258.373 ms
+Executing test_query_35.sql
+  count  
+---------
+ 5769541
+(1 row)
+
+Time: 488.848 ms
+Executing test_query_36.sql
+ count  
+--------
+ 403686
+(1 row)
+
+Time: 269.015 ms
+Executing test_query_37.sql
+ count 
+-------
+  4010
+(1 row)
+
+Time: 101.986 ms
+Executing test_query_38.sql
+ count 
+-------
+ 34702
+(1 row)
+
+Time: 129.310 ms
+Executing test_query_39.sql
+ count  
+--------
+ 875992
+(1 row)
+
+Time: 248.213 ms
+Executing test_query_40.sql
+ count 
+-------
+  2506
+(1 row)
+
+Time: 72.484 ms
+Executing test_query_41.sql
+ count 
+-------
+  4901
+(1 row)
+
+Time: 118.973 ms
+Executing test_query_42.sql
+ count 
+-------
+    38
+(1 row)
+
+Time: 120.120 ms
+Executing test_query_43.sql
+ count  
+--------
+ 116202
+(1 row)
+
+Time: 143.806 ms
+Executing test_query_44.sql
+  count   
+----------
+ 19778664
+(1 row)
+
+Time: 7017.655 ms (00:07.018)
+Executing test_query_45.sql
+ count 
+-------
+  4563
+(1 row)
+
+Time: 146.195 ms
+Executing test_query_46.sql
+ count 
+-------
+   262
+(1 row)
+
+Time: 89.765 ms
+Executing test_query_47.sql
+ count 
+-------
+  2994
+(1 row)
+
+Time: 77.522 ms
+Executing test_query_48.sql
+ count 
+-------
+  1976
+(1 row)
+
+Time: 156.265 ms
+Executing test_query_49.sql
+ count 
+-------
+ 26010
+(1 row)
+
+Time: 167.522 ms
+Executing test_query_50.sql
+ count 
+-------
+   487
+(1 row)
+
+Time: 56.249 ms
+Pausing for 30 seconds...
+Executing test_query_51.sql
+ count 
+-------
+  3804
+(1 row)
+
+Time: 73.281 ms
+Executing test_query_52.sql
+  count   
+----------
+ 26180221
+(1 row)
+
+Time: 3997.025 ms (00:03.997)
+Executing test_query_53.sql
+   count   
+-----------
+ 765926661
+(1 row)
+
+Time: 36863.975 ms (00:36.864)
+Executing test_query_54.sql
+  count  
+---------
+ 5590742
+(1 row)
+
+Time: 1969.129 ms (00:01.969)
+Executing test_query_55.sql
+ count 
+-------
+ 60382
+(1 row)
+
+Time: 122.929 ms
+Executing test_query_56.sql
+ count  
+--------
+ 149882
+(1 row)
+
+Time: 138.551 ms
+Executing test_query_57.sql
+  count  
+---------
+ 3791330
+(1 row)
+
+Time: 624.759 ms
+Executing test_query_58.sql
+ count 
+-------
+ 93093
+(1 row)
+
+Time: 204.427 ms
+Executing test_query_59.sql
+ count 
+-------
+  7624
+(1 row)
+
+Time: 85.812 ms
+Executing test_query_60.sql
+  count   
+----------
+ 37249244
+(1 row)
+
+Time: 3319.251 ms (00:03.319)
+Executing test_query_61.sql
+ count 
+-------
+ 22395
+(1 row)
+
+Time: 117.021 ms
+Executing test_query_62.sql
+ count 
+-------
+  3780
+(1 row)
+
+Time: 73.824 ms
+Executing test_query_63.sql
+ count 
+-------
+  5474
+(1 row)
+
+Time: 116.772 ms
+Executing test_query_64.sql
+ count 
+-------
+   192
+(1 row)
+
+Time: 71.303 ms
+Executing test_query_65.sql
+  count  
+---------
+ 4527419
+(1 row)
+
+Time: 507.257 ms
+Executing test_query_66.sql
+  count  
+---------
+ 4326325
+(1 row)
+
+Time: 1038.201 ms (00:01.038)
+Executing test_query_67.sql
+ count 
+-------
+ 92332
+(1 row)
+
+Time: 177.487 ms
+Executing test_query_68.sql
+ count 
+-------
+ 63126
+(1 row)
+
+Time: 103.602 ms
+Executing test_query_69.sql
+  count   
+----------
+ 35970093
+(1 row)
+
+Time: 3456.533 ms (00:03.457)
+Executing test_query_70.sql
+ count 
+-------
+ 99542
+(1 row)
+
+Time: 73.557 ms
+Executing test_query_71.sql
+ count  
+--------
+ 671842
+(1 row)
+
+Time: 157.100 ms
+Executing test_query_72.sql
+ count 
+-------
+ 80250
+(1 row)
+
+Time: 95.385 ms
+Executing test_query_73.sql
+  count   
+----------
+ 85142349
+(1 row)
+
+Time: 6249.929 ms (00:06.250)
+Executing test_query_74.sql
+ count  
+--------
+ 262929
+(1 row)
+
+Time: 127.914 ms
+Executing test_query_75.sql
+ count 
+-------
+ 10577
+(1 row)
+
+Time: 100.088 ms
+Pausing for 30 seconds...
+Executing test_query_76.sql
+ count 
+-------
+ 13816
+(1 row)
+
+Time: 104.234 ms
+Executing test_query_77.sql
+ count 
+-------
+   586
+(1 row)
+
+Time: 56.920 ms
+Executing test_query_78.sql
+ count 
+-------
+     0
+(1 row)
+
+Time: 58.824 ms
+Executing test_query_79.sql
+  count  
+---------
+ 1056660
+(1 row)
+
+Time: 816.674 ms
+Executing test_query_80.sql
+ count 
+-------
+  7355
+(1 row)
+
+Time: 122.178 ms
+Executing test_query_81.sql
+ count 
+-------
+  5468
+(1 row)
+
+Time: 77.586 ms
+Executing test_query_82.sql
+ count 
+-------
+ 44724
+(1 row)
+
+Time: 113.829 ms
+Executing test_query_83.sql
+ count  
+--------
+ 606028
+(1 row)
+
+Time: 221.903 ms
+Executing test_query_84.sql
+ count 
+-------
+   440
+(1 row)
+
+Time: 62.460 ms
+Executing test_query_85.sql
+ count 
+-------
+    28
+(1 row)
+
+Time: 132.980 ms
+Executing test_query_86.sql
+ count 
+-------
+   330
+(1 row)
+
+Time: 104.845 ms
+Executing test_query_87.sql
+ count  
+--------
+ 536698
+(1 row)
+
+Time: 140.244 ms
+Executing test_query_88.sql
+ count 
+-------
+   994
+(1 row)
+
+Time: 63.543 ms
+Executing test_query_89.sql
+ count  
+--------
+ 184449
+(1 row)
+
+Time: 146.183 ms
+Executing test_query_90.sql
+ count 
+-------
+ 88428
+(1 row)
+
+Time: 75.132 ms
+Executing test_query_91.sql
+ count 
+-------
+  1596
+(1 row)
+
+Time: 93.028 ms
+Executing test_query_92.sql
+ count 
+-------
+  5410
+(1 row)
+
+Time: 81.484 ms
+Executing test_query_93.sql
+  count  
+---------
+ 2098391
+(1 row)
+
+Time: 319.688 ms
+Executing test_query_94.sql
+  count  
+---------
+ 4908915
+(1 row)
+
+Time: 1498.457 ms (00:01.498)
+Executing test_query_95.sql
+ count  
+--------
+ 536698
+(1 row)
+
+Time: 139.528 ms
+Executing test_query_96.sql
+ count  
+--------
+ 859945
+(1 row)
+
+Time: 142.548 ms
+Executing test_query_97.sql
+ count 
+-------
+ 11515
+(1 row)
+
+Time: 94.904 ms
+Executing test_query_98.sql
+ count 
+-------
+ 51470
+(1 row)
+
+Time: 131.549 ms
+Executing test_query_99.sql
+ count  
+--------
+ 689872
+(1 row)
+
+Time: 454.406 ms
+Executing test_query_100.sql
+ count 
+-------
+ 60913
+(1 row)
+
+Time: 151.154 ms
+Pausing for 30 seconds...
+Executing test_query_101.sql
+ count 
+-------
+ 18756
+(1 row)
+
+Time: 141.999 ms
+Executing test_query_102.sql
+ count  
+--------
+ 341025
+(1 row)
+
+Time: 209.325 ms
+Executing test_query_103.sql
+ count 
+-------
+  7219
+(1 row)
+
+Time: 112.493 ms
+Executing test_query_104.sql
+ count 
+-------
+ 68134
+(1 row)
+
+Time: 111.798 ms
+Executing test_query_105.sql
+ count 
+-------
+  4302
+(1 row)
+
+Time: 103.075 ms
+Executing test_query_106.sql
+ count 
+-------
+ 63498
+(1 row)
+
+Time: 81.065 ms
+Executing test_query_107.sql
+ count 
+-------
+ 59162
+(1 row)
+
+Time: 172.987 ms
+Executing test_query_108.sql
+ count  
+--------
+ 258074
+(1 row)
+
+Time: 147.790 ms
+Executing test_query_109.sql
+  count  
+---------
+ 1264791
+(1 row)
+
+Time: 274.567 ms
+Executing test_query_110.sql
+  count  
+---------
+ 1331836
+(1 row)
+
+Time: 231.655 ms
+Executing test_query_111.sql
+ count 
+-------
+ 10390
+(1 row)
+
+Time: 187.323 ms
+Executing test_query_112.sql
+ count 
+-------
+   996
+(1 row)
+
+Time: 92.893 ms
+Executing test_query_113.sql
+ count  
+--------
+ 869118
+(1 row)
+
+Time: 192.245 ms
+Executing test_query_114.sql
+  count  
+---------
+ 2891160
+(1 row)
+
+Time: 278.984 ms
+Executing test_query_115.sql
+ count 
+-------
+   581
+(1 row)
+
+Time: 67.600 ms
+Executing test_query_116.sql
+ count 
+-------
+ 92304
+(1 row)
+
+Time: 103.474 ms
+Executing test_query_117.sql
+  count   
+----------
+ 12225309
+(1 row)
+
+Time: 1077.749 ms (00:01.078)
+Executing test_query_118.sql
+  count  
+---------
+ 1758891
+(1 row)
+
+Time: 337.827 ms
+Executing test_query_119.sql
+   count   
+-----------
+ 140667608
+(1 row)
+
+Time: 7241.956 ms (00:07.242)
+Executing test_query_120.sql
+  count  
+---------
+ 2659107
+(1 row)
+
+Time: 280.433 ms
+Executing test_query_121.sql
+ count 
+-------
+ 51560
+(1 row)
+
+Time: 56.670 ms
+Executing test_query_122.sql
+ count 
+-------
+  7388
+(1 row)
+
+Time: 114.324 ms
+Executing test_query_123.sql
+  count  
+---------
+ 8366769
+(1 row)
+
+Time: 772.203 ms
+Executing test_query_124.sql
+   count    
+------------
+ 1455757213
+(1 row)
+
+Time: 28514.404 ms (00:28.514)
+Executing test_query_125.sql
+ count 
+-------
+ 90762
+(1 row)
+
+Time: 175.351 ms
+Pausing for 30 seconds...
+Executing test_query_126.sql
+ count 
+-------
+ 29454
+(1 row)
+
+Time: 153.828 ms
+Executing test_query_127.sql
+  count  
+---------
+ 1317732
+(1 row)
+
+Time: 212.362 ms
+Executing test_query_128.sql
+ count 
+-------
+   447
+(1 row)
+
+Time: 67.638 ms
+Executing test_query_129.sql
+ count 
+-------
+  3307
+(1 row)
+
+Time: 127.183 ms
+Executing test_query_130.sql
+ count 
+-------
+  2622
+(1 row)
+
+Time: 103.739 ms
+Executing test_query_131.sql
+ count 
+-------
+   632
+(1 row)
+
+Time: 46.206 ms
+Executing test_query_132.sql
+ count 
+-------
+    54
+(1 row)
+
+Time: 51.394 ms
+Executing test_query_133.sql
+ count 
+-------
+ 13587
+(1 row)
+
+Time: 148.698 ms
+Executing test_query_134.sql
+  count  
+---------
+ 2246901
+(1 row)
+
+Time: 317.772 ms
+Executing test_query_135.sql
+ count  
+--------
+ 815042
+(1 row)
+
+Time: 142.613 ms
+Executing test_query_136.sql
+  count  
+---------
+ 2292827
+(1 row)
+
+Time: 846.939 ms
+Executing test_query_137.sql
+ count 
+-------
+ 78858
+(1 row)
+
+Time: 459.079 ms
+Executing test_query_138.sql
+ count  
+--------
+ 883011
+(1 row)
+
+Time: 146.348 ms
+Executing test_query_139.sql
+   count   
+-----------
+ 143754043
+(1 row)
+
+Time: 6232.792 ms (00:06.233)
+Executing test_query_140.sql
+ count 
+-------
+  1034
+(1 row)
+
+Time: 98.851 ms
+Executing test_query_141.sql
+ count 
+-------
+ 64004
+(1 row)
+
+Time: 82.181 ms
+Executing test_query_142.sql
+  count  
+---------
+ 2085481
+(1 row)
+
+Time: 367.952 ms
+Executing test_query_143.sql
+ count  
+--------
+ 185326
+(1 row)
+
+Time: 181.429 ms
+Executing test_query_144.sql
+ count 
+-------
+  3504
+(1 row)
+
+Time: 91.142 ms
+Executing test_query_145.sql
+ count 
+-------
+ 67518
+(1 row)
+
+Time: 146.530 ms
+Executing test_query_146.sql
+ count 
+-------
+  2065
+(1 row)
+
+Time: 53.082 ms
+All SQL files executed.
